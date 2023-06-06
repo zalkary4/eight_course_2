@@ -6,14 +6,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Piano')),
+      appBar: AppBar(
+        title: const Text('Piano'),
+        centerTitle: true,
+      ),
       body: Column(
         children: [
-          Expanded(
-            child: Container(
-              color: Colors.red,
-            ),
-          ),
           Expanded(
             child: Container(
               color: Colors.red,
@@ -36,17 +34,17 @@ class HomePage extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              color: Colors.blue,
+              color: const Color.fromARGB(255, 60, 157, 236),
             ),
           ),
           Expanded(
             child: Container(
-              color: Colors.indigo,
+              color: Color.fromARGB(255, 5, 5, 248),
             ),
           ),
           Expanded(
             child: Container(
-              color: const Color.fromARGB(255, 72, 17, 222),
+              color: Colors.purple,
             ),
           ),
         ],

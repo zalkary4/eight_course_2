@@ -34,20 +34,8 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Row(
           children: [
-            DiceImage(
-              dice1,
-              onTap: () {
-                dice1 = Random().nextInt(7);
-                print('dice1 = ${dice1}');
-              },
-            ),
-            DiceImage(
-              dice2,
-              onTap: () {
-                dice2 = Random().nextInt(7);
-                print('dice2 = ${dice2}');
-              },
-            ),
+            DiceImage(dice1),
+            DiceImage(dice2),
           ],
         ),
       ),
@@ -56,14 +44,9 @@ class _HomePageState extends State<HomePage> {
 }
 
 class DiceImage extends StatefulWidget {
-  const DiceImage(
-    this.index, {
-    super.key,
-    required this.onTap,
-  });
+  DiceImage(this.index, {super.key});
 
-  final int index;
-  final void Function()? onTap;
+  int index;
 
   @override
   State<DiceImage> createState() => _DiceImageState();
@@ -75,11 +58,14 @@ class _DiceImageState extends State<DiceImage> {
     return Expanded(
       child: InkWell(
         onTap: () {
-          widget.onTap;
+          setState(() {
+            widget.index = Random().nextInt(7);
+          });
         },
         child: Padding(
           padding: EdgeInsets.all(10.0),
-          child: Image.asset('assets/dice${widget.index}.png'),
+          child: Image.asset(
+              'assets/dice${widget.index == 0 ? 1 : widget.index}.png'),
         ),
       ),
     );

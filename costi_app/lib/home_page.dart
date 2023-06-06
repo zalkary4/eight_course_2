@@ -59,13 +59,12 @@ class _DiceImageState extends State<DiceImage> {
       child: InkWell(
         onTap: () {
           setState(() {
-            widget.index = Random().nextInt(7);
+            widget.index = Random().nextInt(6) + 1;
           });
         },
         child: Padding(
           padding: EdgeInsets.all(10.0),
-          child: Image.asset(
-              'assets/dice${widget.index == 0 ? 1 : widget.index}.png'),
+          child: Image.asset('assets/dice${widget.index}.png'),
         ),
       ),
     );

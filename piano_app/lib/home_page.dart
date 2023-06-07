@@ -8,7 +8,13 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: const Text('Piano'),
+        title: const Text(
+          'Piano',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         centerTitle: true,
       ),
       body: const Column(

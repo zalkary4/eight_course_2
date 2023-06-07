@@ -12,10 +12,8 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Expanded(
-            child: Container(
-              color: Colors.red,
-            ),
+          CustomCard(
+            color: Colors.red,
           ),
           Expanded(
             child: Container(
@@ -48,6 +46,22 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CustomCard extends StatelessWidget {
+  const CustomCard({
+    super.key,
+    required this.color,
+  });
+  final Color color;
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        color: color,
       ),
     );
   }

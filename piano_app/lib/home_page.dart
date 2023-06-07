@@ -7,44 +7,19 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: const Text('Piano'),
         centerTitle: true,
       ),
-      body: Column(
+      body: const Column(
         children: [
-          CustomCard(
-            color: Colors.red,
-          ),
-          Expanded(
-            child: Container(
-              color: Colors.orange,
-            ),
-          ),
-          Expanded(
-            child: Container(
-              color: Colors.yellow,
-            ),
-          ),
-          Expanded(
-            child: Container(
-              color: Colors.green,
-            ),
-          ),
-          Expanded(
-            child: Container(
-              color: const Color.fromARGB(255, 60, 157, 236),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              color: Color.fromARGB(255, 5, 5, 248),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              color: Colors.purple,
-            ),
-          ),
+          CustomCard(color: Colors.red),
+          CustomCard(color: Colors.orange),
+          CustomCard(color: Colors.yellow),
+          CustomCard(color: Colors.green),
+          CustomCard(color: Colors.blue),
+          CustomCard(color: Colors.indigo),
+          CustomCard(color: Colors.purple)
         ],
       ),
     );

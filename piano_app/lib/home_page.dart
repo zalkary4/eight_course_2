@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:audioplayers/audioplayers.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -41,8 +42,13 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        color: color,
+      child: InkWell(
+        onTap: () {
+          // AudioCache(prefix: 'assets/do.wav');
+        },
+        child: Container(
+          color: color,
+        ),
       ),
     );
   }

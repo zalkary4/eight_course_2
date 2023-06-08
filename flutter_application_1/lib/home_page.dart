@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text(
-          'Piano',
+          'Pianoeeee',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w600,

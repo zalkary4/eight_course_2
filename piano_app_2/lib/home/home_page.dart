@@ -25,12 +25,26 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             flex: 3,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 11,
-              itemBuilder: (context, index) {
-                return const PianoWhiteButton();
-              },
+            child: Stack(
+              children: [
+                ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 11,
+                  itemBuilder: (context, index) {
+                    return const PianoWhiteButton();
+                  },
+                ),
+                SizedBox(
+                  height: 200,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 11,
+                    itemBuilder: (context, index) {
+                      return const PianoWhiteButton();
+                    },
+                  ),
+                ),
+              ],
             ),
           ),
         ],

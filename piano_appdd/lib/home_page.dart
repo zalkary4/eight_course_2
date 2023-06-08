@@ -1,4 +1,3 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,13 +19,13 @@ class HomePage extends StatelessWidget {
       ),
       body: const Column(
         children: [
-          CustomCard(color: Colors.red, nota: 'do'),
-          CustomCard(color: Colors.orange, nota: 're'),
-          CustomCard(color: Colors.yellow, nota: 'mi'),
-          CustomCard(color: Colors.green, nota: 'fa'),
-          CustomCard(color: Colors.blue, nota: 'sol'),
-          CustomCard(color: Colors.indigo, nota: 'lya'),
-          CustomCard(color: Colors.purple, nota: 'si')
+          CustomCard(color: Colors.red),
+          CustomCard(color: Colors.orange),
+          CustomCard(color: Colors.yellow),
+          CustomCard(color: Colors.green),
+          CustomCard(color: Colors.blue),
+          CustomCard(color: Colors.indigo),
+          CustomCard(color: Colors.purple)
         ],
       ),
     );
@@ -37,20 +36,13 @@ class CustomCard extends StatelessWidget {
   const CustomCard({
     super.key,
     required this.color,
-    required this.nota,
   });
   final Color color;
-  final String nota;
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: InkWell(
-        onTap: () {
-          AudioPlayer().play(AssetSource('$nota.wav'));
-        },
-        child: Container(
-          color: color,
-        ),
+      child: Container(
+        color: color,
       ),
     );
   }

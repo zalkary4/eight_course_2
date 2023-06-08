@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -41,8 +42,13 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        color: color,
+      child: InkWell(
+        onTap: () async {
+          await AudioPlayer().play(AssetSource('assets/'));
+        },
+        child: Container(
+          color: color,
+        ),
       ),
     );
   }

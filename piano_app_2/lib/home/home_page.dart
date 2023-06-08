@@ -31,16 +31,16 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.horizontal,
                   itemCount: 11,
                   itemBuilder: (context, index) {
-                    return const PianoWhiteButton();
+                    return const PianoWhiteButton(Colors.white);
                   },
                 ),
                 SizedBox(
-                  height: 200,
+                  height: 150,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: 11,
                     itemBuilder: (context, index) {
-                      return const PianoWhiteButton();
+                      return const PianoWhiteButton(Colors.black);
                     },
                   ),
                 ),

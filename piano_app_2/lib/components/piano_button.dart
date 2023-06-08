@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PianoWhiteButton extends StatelessWidget {
-  const PianoWhiteButton({super.key});
-
+  const PianoWhiteButton(this.color, {super.key});
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -11,7 +11,7 @@ class PianoWhiteButton extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith(
             (states) {
-              Colors.red;
+              color;
             },
           ),
           overlayColor: MaterialStateProperty.resolveWith((states) {

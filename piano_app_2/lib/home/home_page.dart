@@ -48,12 +48,12 @@ class _HomePageState extends State<HomePage> {
               itemCount: 11,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return Stack(
+                return const Stack(
                   children: [
                     PianoWhiteButton(),
                     Positioned(
-                      top: 0,
-                      right: -60,
+                      top: 2,
+                      right: -10,
                       child: PianoBlackButton(),
                     ),
                   ],

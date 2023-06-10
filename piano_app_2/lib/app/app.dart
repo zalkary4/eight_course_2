@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.dark(),
       // theme: ThemeData(
-      // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       // useMaterial3: true,
       // ),
       home: const HomePage(),

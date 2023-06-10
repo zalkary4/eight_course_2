@@ -1,8 +1,9 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class PianoWhiteButton extends StatelessWidget {
-  const PianoWhiteButton({super.key});
-
+  const PianoWhiteButton(this.nota, {super.key});
+  final String nota;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -22,7 +23,9 @@ class PianoWhiteButton extends StatelessWidget {
               },
             ),
           ),
-          onPressed: () {},
+          onPressed: () async {
+            await AudioPlayer().play(AssetSource('$nota.mp3'));
+          },
           child: const Align(
             alignment: Alignment.bottomCenter,
             child: Text(

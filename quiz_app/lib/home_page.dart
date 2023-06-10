@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
       ),
-      body: Column(
+      body: const Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Text(
@@ -28,10 +28,37 @@ class _HomePageState extends State<HomePage> {
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.white, fontSize: 30),
           ),
-          QuizButton(),
-          QuizButton(),
+          QuizButton(true),
+          QuizButton(false),
+          Row(
+            children: [
+              Icon(
+                Icons.check,
+                color: Colors.green,
+              ),
+              SizedBox(),
+              ResultIcon(true),
+              ResultIcon(false),
+            ],
+          ),
         ],
       ),
+    );
+  }
+}
+
+class ResultIcon extends StatelessWidget {
+  const ResultIcon(
+    this.isTrue, {
+    super.key,
+  });
+  final bool isTrue;
+  @override
+  Widget build(BuildContext context) {
+    return Icon(
+      isTrue ? Icons.close : Icons.close,
+      color: isTrue ? Colors.red : Colors.red,
+      size: 35,
     );
   }
 }
@@ -48,9 +75,9 @@ class QuizButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             backgroundColor: isTrue ? Colors.green : Colors.red),
         onPressed: () {},
-        child: const Text(
-          'Туура',
-          style: TextStyle(
+        child: Text(
+          isTrue ? 'Туура' : 'Туура эмес',
+          style: const TextStyle(
             fontSize: 26,
           ),
         ),

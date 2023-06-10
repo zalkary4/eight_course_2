@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Piano App'),
         centerTitle: true,
       ),
-      body: const Column(
+      body: Column(
         children: [
           Expanded(
             child: Center(child: Text('do re mi fa')),
@@ -61,37 +61,44 @@ class _HomePageState extends State<HomePage> {
             //     },
             //   ),
             // ),
-            child: Stack(
-              children: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
+            child: ListView.builder(
+              itemCount: 2,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return const Stack(
                   children: [
-                    PianoWhiteButton(),
-                    PianoWhiteButton(),
-                    PianoWhiteButton(),
-                    PianoWhiteButton(),
-                    PianoWhiteButton(),
-                    PianoWhiteButton(),
-                    PianoWhiteButton(),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        PianoWhiteButton(),
+                        PianoWhiteButton(),
+                        PianoWhiteButton(),
+                        PianoWhiteButton(),
+                        PianoWhiteButton(),
+                        PianoWhiteButton(),
+                        PianoWhiteButton(),
+                      ],
+                    ),
+                    Positioned(
+                      left: 40.0,
+                      right: 0.0,
+                      // bottom: 100.0,
+                      top: 0.0,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          PianoBlackButton(),
+                          PianoBlackButton(),
+                          PianoBlackButton(),
+                          PianoBlackButton(visible: false),
+                          PianoBlackButton(),
+                          PianoBlackButton(),
+                        ],
+                      ),
+                    )
                   ],
-                ),
-                Positioned(
-                  left: 0.0,
-                  right: 0.0,
-                  // bottom: 100.0,
-                  top: 0.0,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      PianoBlackButton(),
-                      PianoBlackButton(),
-                      PianoBlackButton(),
-                      PianoBlackButton(),
-                      PianoBlackButton(),
-                    ],
-                  ),
-                )
-              ],
+                );
+              },
             ),
           ),
         ],

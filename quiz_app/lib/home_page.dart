@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/widget/quiz_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
       body: const Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             'Кыргызстанда 7 область бар',
             textAlign: TextAlign.center,
             style: TextStyle(color: Colors.white, fontSize: 30),
@@ -55,29 +56,6 @@ class ResultIcon extends StatelessWidget {
       isTrue ? Icons.close : Icons.close,
       color: isTrue ? Colors.red : Colors.red,
       size: 35,
-    );
-  }
-}
-
-class QuizButton extends StatelessWidget {
-  const QuizButton(this.isTrue, {super.key});
-  final bool isTrue;
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 40,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-            backgroundColor: isTrue ? Colors.green : Colors.red),
-        onPressed: () {},
-        child: Text(
-          isTrue ? 'Туура' : 'Туура эмес',
-          style: const TextStyle(
-            fontSize: 26,
-          ),
-        ),
-      ),
     );
   }
 }

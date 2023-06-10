@@ -32,10 +32,6 @@ class _HomePageState extends State<HomePage> {
           QuizButton(false),
           Row(
             children: [
-              Icon(
-                Icons.check,
-                color: Colors.green,
-              ),
               SizedBox(),
               ResultIcon(true),
               ResultIcon(false),

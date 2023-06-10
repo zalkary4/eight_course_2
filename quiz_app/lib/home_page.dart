@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/widget/quiz_button.dart';
+import 'package:quiz_app/widget/result_icon.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -21,41 +22,32 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
       ),
-      body: const Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            'Кыргызстанда 7 область бар',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.white, fontSize: 30),
-          ),
-          QuizButton(true),
-          QuizButton(false),
-          Row(
-            children: [
-              SizedBox(),
-              ResultIcon(true),
-              ResultIcon(false),
-            ],
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: const Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Spacer(),
+            Text(
+              'Кыргызстанда 7 область барбы?',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white, fontSize: 30),
+            ),
+            const Spacer(),
+            QuizButton(true),
+            SizedBox(height: 20),
+            QuizButton(false),
+            SizedBox(height: 50),
+            Row(
+              children: [
+                ResultIcon(true),
+                ResultIcon(false),
+              ],
+            ),
+            SizedBox(height: 50),
+          ],
+        ),
       ),
-    );
-  }
-}
-
-class ResultIcon extends StatelessWidget {
-  const ResultIcon(
-    this.isTrue, {
-    super.key,
-  });
-  final bool isTrue;
-  @override
-  Widget build(BuildContext context) {
-    return Icon(
-      isTrue ? Icons.close : Icons.close,
-      color: isTrue ? Colors.red : Colors.red,
-      size: 35,
     );
   }
 }

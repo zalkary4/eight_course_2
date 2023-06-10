@@ -8,34 +8,37 @@ class PianoWhiteButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      // height: 250,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 11,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.all(1.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.resolveWith(
-                  (states) {
-                    Colors.red;
-                  },
+            padding: const EdgeInsets.all(2.0),
+            child: SizedBox(
+              width: 80,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.resolveWith(
+                    (states) {
+                      Colors.red;
+                    },
+                  ),
+                  overlayColor: MaterialStateProperty.resolveWith((states) {
+                    return states.contains(MaterialState.pressed)
+                        ? Colors.orange
+                        : null;
+                  }),
                 ),
-                overlayColor: MaterialStateProperty.resolveWith((states) {
-                  return states.contains(MaterialState.pressed)
-                      ? Colors.orange
-                      : null;
-                }),
-              ),
-              child: const Align(
-                alignment: Alignment.bottomCenter,
-                child: Text(
-                  'f3',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
+                child: const Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    'f3',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ),

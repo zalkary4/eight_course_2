@@ -7,44 +7,47 @@ class PianoBlackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 11,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(1.0),
-            child: SizedBox(
-              width: 40,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.resolveWith(
-                    (states) {
-                      Colors.red;
-                    },
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10.5),
+      child: SizedBox(
+        height: 180,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: 11,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(1.0),
+              child: SizedBox(
+                width: 60,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith(
+                      (states) {
+                        Colors.red;
+                      },
+                    ),
+                    overlayColor: MaterialStateProperty.resolveWith((states) {
+                      return states.contains(MaterialState.pressed)
+                          ? Colors.red
+                          : null;
+                    }),
                   ),
-                  overlayColor: MaterialStateProperty.resolveWith((states) {
-                    return states.contains(MaterialState.pressed)
-                        ? Colors.red
-                        : null;
-                  }),
-                ),
-                child: const Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Text(
-                    'f3',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
+                  child: const Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Text(
+                      'f3',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }

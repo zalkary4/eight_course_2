@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Piano App'),
         centerTitle: true,
       ),
-      body: Column(
+      body: const Column(
         children: [
           Expanded(
             child: Center(child: Text('do re mi fa')),
@@ -64,6 +64,7 @@ class _HomePageState extends State<HomePage> {
             child: Stack(
               children: [
                 Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     PianoWhiteButton(),
                     PianoWhiteButton(),
@@ -74,6 +75,22 @@ class _HomePageState extends State<HomePage> {
                     PianoWhiteButton(),
                   ],
                 ),
+                Positioned(
+                  left: 0.0,
+                  right: 0.0,
+                  // bottom: 100.0,
+                  top: 0.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      PianoBlackButton(),
+                      PianoBlackButton(),
+                      PianoBlackButton(),
+                      PianoBlackButton(),
+                      PianoBlackButton(),
+                    ],
+                  ),
+                )
               ],
             ),
           ),

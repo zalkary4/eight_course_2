@@ -11,12 +11,13 @@ class PianoBlackButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10.5),
       child: SizedBox(
         height: 180,
+        // width: 63,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 11,
           itemBuilder: (context, index) {
             return Padding(
-              padding: const EdgeInsets.all(1.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: SizedBox(
                 width: 60,
                 child: ElevatedButton(

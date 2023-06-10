@@ -19,17 +19,29 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Piano App'),
         centerTitle: true,
       ),
-      body: const Column(
+      body: Column(
         children: [
-          Expanded(
+          const Expanded(
             child: Center(child: Text('do re mi fa')),
           ),
           Expanded(
             flex: 3,
             child: Stack(
               children: [
-                PianoWhiteButton(),
-                PianoBlackButton(),
+                ListView.builder(
+                  itemCount: 11,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return const PianoWhiteButton();
+                  },
+                ),
+                ListView.builder(
+                  itemCount: 11,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return const PianoBlackButton();
+                  },
+                ),
               ],
             ),
           ),

@@ -13,54 +13,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
-      // backgroundColor: Colors.black,
+      drawer: const Drawer(),
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Piano App'),
         centerTitle: true,
       ),
       body: Column(
         children: [
-          Expanded(
+          const Expanded(
             child: Center(child: Text('do re mi fa')),
           ),
           Expanded(
             flex: 3,
-            // child: Stack(
-            //   children: [
-            //     ListView.builder(
-            //       itemCount: 11,
-            //       scrollDirection: Axis.horizontal,
-            //       itemBuilder: (context, index) {
-            //         return const PianoWhiteButton();
-            //       },
-            //     ),
-            //     ListView.builder(
-            //       itemCount: 11,
-            //       scrollDirection: Axis.horizontal,
-            //       itemBuilder: (context, index) {
-            //         return const PianoBlackButton();
-            //       },
-            //     ),
-            //   ],
-            // ),
-            //   child: ListView.builder(
-            //     itemCount: 11,
-            //     scrollDirection: Axis.horizontal,
-            //     itemBuilder: (context, index) {
-            //       return const Stack(
-            //         children: [
-            //           PianoWhiteButton(),
-            //           Positioned(
-            //             top: 2,
-            //             right: -10,
-            //             child: PianoBlackButton(),
-            //           ),
-            //         ],
-            //       );
-            //     },
-            //   ),
-            // ),
             child: ListView.builder(
               itemCount: 2,
               scrollDirection: Axis.horizontal,
@@ -82,7 +47,6 @@ class _HomePageState extends State<HomePage> {
                     Positioned(
                       left: 40.0,
                       right: 0.0,
-                      // bottom: 100.0,
                       top: 0.0,
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -95,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                           PianoBlackButton(),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 );
               },

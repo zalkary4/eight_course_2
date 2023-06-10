@@ -16,11 +16,11 @@ class PianoWhiteButton extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {},
             style: ButtonStyle(
-              // backgroundColor: MaterialStateProperty.resolveWith(
-              //   (states) {
-              //     const Color.fromARGB(255, 255, 255, 255);
-              //   },
-              // ),
+              backgroundColor: MaterialStateProperty.resolveWith(
+                (states) {
+                  const Color.fromARGB(255, 255, 255, 255);
+                },
+              ),
               overlayColor: MaterialStateProperty.resolveWith((states) {
                 return states.contains(MaterialState.pressed)
                     ? Colors.orange

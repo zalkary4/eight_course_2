@@ -44,21 +44,37 @@ class _HomePageState extends State<HomePage> {
             //     ),
             //   ],
             // ),
-            child: ListView.builder(
-              itemCount: 11,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return const Stack(
+            //   child: ListView.builder(
+            //     itemCount: 11,
+            //     scrollDirection: Axis.horizontal,
+            //     itemBuilder: (context, index) {
+            //       return const Stack(
+            //         children: [
+            //           PianoWhiteButton(),
+            //           Positioned(
+            //             top: 2,
+            //             right: -10,
+            //             child: PianoBlackButton(),
+            //           ),
+            //         ],
+            //       );
+            //     },
+            //   ),
+            // ),
+            child: Stack(
+              children: [
+                Row(
                   children: [
                     PianoWhiteButton(),
-                    Positioned(
-                      top: 2,
-                      right: -10,
-                      child: PianoBlackButton(),
-                    ),
+                    PianoWhiteButton(),
+                    PianoWhiteButton(),
+                    PianoWhiteButton(),
+                    PianoWhiteButton(),
+                    PianoWhiteButton(),
+                    PianoWhiteButton(),
                   ],
-                );
-              },
+                ),
+              ],
             ),
           ),
         ],

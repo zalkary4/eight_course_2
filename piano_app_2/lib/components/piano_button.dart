@@ -9,42 +9,36 @@ class PianoWhiteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       // height: 250,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 11,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: SizedBox(
-              width: 80,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.resolveWith(
-                    (states) {
-                      Colors.red;
-                    },
-                  ),
-                  overlayColor: MaterialStateProperty.resolveWith((states) {
-                    return states.contains(MaterialState.pressed)
-                        ? Colors.orange
-                        : null;
-                  }),
-                ),
-                child: const Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Text(
-                    'f3',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                    ),
-                  ),
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: SizedBox(
+          width: 80,
+          child: ElevatedButton(
+            onPressed: () {},
+            style: ButtonStyle(
+              // backgroundColor: MaterialStateProperty.resolveWith(
+              //   (states) {
+              //     const Color.fromARGB(255, 255, 255, 255);
+              //   },
+              // ),
+              overlayColor: MaterialStateProperty.resolveWith((states) {
+                return states.contains(MaterialState.pressed)
+                    ? Colors.orange
+                    : null;
+              }),
+            ),
+            child: const Align(
+              alignment: Alignment.bottomCenter,
+              child: Text(
+                'f3',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
                 ),
               ),
             ),
-          );
-        },
+          ),
+        ),
       ),
     );
   }

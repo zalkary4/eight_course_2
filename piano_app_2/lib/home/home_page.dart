@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const Drawer(),
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Piano App'),
         centerTitle: true,
@@ -26,23 +26,39 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             flex: 3,
-            child: Stack(
-              children: [
-                ListView.builder(
-                  itemCount: 11,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return const PianoWhiteButton();
-                  },
-                ),
-                ListView.builder(
-                  itemCount: 11,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return const PianoBlackButton();
-                  },
-                ),
-              ],
+            // child: Stack(
+            //   children: [
+            //     ListView.builder(
+            //       itemCount: 11,
+            //       scrollDirection: Axis.horizontal,
+            //       itemBuilder: (context, index) {
+            //         return const PianoWhiteButton();
+            //       },
+            //     ),
+            //     ListView.builder(
+            //       itemCount: 11,
+            //       scrollDirection: Axis.horizontal,
+            //       itemBuilder: (context, index) {
+            //         return const PianoBlackButton();
+            //       },
+            //     ),
+            //   ],
+            // ),
+            child: ListView.builder(
+              itemCount: 11,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return const Stack(
+                  children: [
+                    PianoWhiteButton(),
+                    Positioned(
+                      top: 0,
+                      right: -10,
+                      child: PianoBlackButton(),
+                    ),
+                  ],
+                );
+              },
             ),
           ),
         ],

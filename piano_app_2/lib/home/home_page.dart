@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(),
+      drawer: Drawer(),
       // backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Piano App'),
@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          const Expanded(
+          Expanded(
             child: Center(child: Text('do re mi fa')),
           ),
           Expanded(
@@ -48,12 +48,12 @@ class _HomePageState extends State<HomePage> {
               itemCount: 11,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return const Stack(
+                return Stack(
                   children: [
                     PianoWhiteButton(),
                     Positioned(
                       top: 0,
-                      right: -10,
+                      right: -60,
                       child: PianoBlackButton(),
                     ),
                   ],

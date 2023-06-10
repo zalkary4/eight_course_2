@@ -10,7 +10,7 @@ class PianoBlackButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10.5),
       child: SizedBox(
-        height: 180,
+        height: 150,
         // width: 63,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.5),

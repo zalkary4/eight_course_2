@@ -4,6 +4,8 @@ import 'package:piano_play/app/app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
+  /// orian phone
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.portraitDown,

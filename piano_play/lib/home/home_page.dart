@@ -14,15 +14,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const Drawer(),
-      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: const Text('Piano App'),
         centerTitle: true,
       ),
       body: Column(
         children: [
           const Expanded(
-            child: Center(child: Text('do re mi fa')),
+            flex: 1,
+            child: Center(
+              child: Text('do re mi fa'),
+            ),
           ),
           Expanded(
             flex: 3,

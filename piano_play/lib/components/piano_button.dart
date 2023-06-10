@@ -1,40 +1,35 @@
 import 'package:flutter/material.dart';
 
 class PianoWhiteButton extends StatelessWidget {
-  const PianoWhiteButton({
-    super.key,
-  });
+  const PianoWhiteButton({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      // height: 250,
-      child: Padding(
-        padding: const EdgeInsets.all(2.0),
-        child: SizedBox(
-          width: 80,
-          child: ElevatedButton(
-            onPressed: () {},
-            style: ButtonStyle(
-              // backgroundColor: MaterialStateProperty.resolveWith(
-              //   (states) {
-              //     const Color.fromARGB(255, 255, 255, 255);
-              //   },
-              // ),
-              overlayColor: MaterialStateProperty.resolveWith((states) {
-                return states.contains(MaterialState.pressed)
-                    ? Colors.orange
-                    : null;
-              }),
+    return Padding(
+      padding: const EdgeInsets.all(2.0),
+      child: SizedBox(
+        width: 80,
+        child: ElevatedButton(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.resolveWith(
+              (states) => Colors.white,
             ),
-            child: const Align(
-              alignment: Alignment.bottomCenter,
-              child: Text(
-                'f3',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                ),
+            overlayColor: MaterialStateProperty.resolveWith(
+              (states) {
+                return states.contains(MaterialState.pressed)
+                    ? const Color.fromARGB(255, 49, 48, 48)
+                    : null;
+              },
+            ),
+          ),
+          onPressed: () {},
+          child: const Align(
+            alignment: Alignment.bottomCenter,
+            child: Text(
+              'f3',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
               ),
             ),
           ),

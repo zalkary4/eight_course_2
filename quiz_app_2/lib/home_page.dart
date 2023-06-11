@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff202020),
+      backgroundColor: const Color(0xff202020),
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text(
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
             Text(
               quizzes[index].question,
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 30),
+              style: const TextStyle(color: Colors.white, fontSize: 30),
             ),
             const Spacer(),
             QuizButton(
@@ -73,7 +73,9 @@ class _HomePageState extends State<HomePage> {
                 itemCount: jooptor.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (BuildContext context, int i) {
-                  return jooptor[i] ? ResultIcon(true) : ResultIcon(false);
+                  return jooptor[i]
+                      ? const ResultIcon(true)
+                      : const ResultIcon(false);
                 },
               ),
             ),

@@ -19,14 +19,25 @@ class _HomePageState extends State<HomePage> {
     } else {
       jooptor.add(false);
     }
-    setState(() {
-      if (quizzes[index] == quizzes.last) {
-        index = 0;
-        jooptor.clear();
-      } else {
-        index++;
-      }
-    });
+    setState(
+      () {
+        if (quizzes[index] == quizzes.last) {
+          index = 0;
+          showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                title: Text('Test is finished'),
+                content: Text('tuura joop: ${jooptor.contains(true)}'),
+              );
+            },
+          );
+          jooptor.clear();
+        } else {
+          index++;
+        }
+      },
+    );
   }
 
   @override

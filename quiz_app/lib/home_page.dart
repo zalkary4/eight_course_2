@@ -22,18 +22,18 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: const Column(
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Spacer(),
+            Spacer(),
             Text(
               'Кыргызстанда 7 область барбы?',
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
-            const Spacer(),
+            Spacer(),
             QuizButton(true),
             SizedBox(height: 20),
             QuizButton(false),

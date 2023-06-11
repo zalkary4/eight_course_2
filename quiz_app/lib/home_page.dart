@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int index = 6;
+  void tecksher() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +30,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Spacer(),
+            const Spacer(),
             Text(
               quizzes[index].question,
               textAlign: TextAlign.center,
@@ -38,12 +39,16 @@ class _HomePageState extends State<HomePage> {
             Spacer(),
             QuizButton(
               true,
-              onPressed: () {},
+              onPressed: (value) {
+                print(value);
+              },
             ),
             SizedBox(height: 20),
             QuizButton(
               false,
-              onPressed: () {},
+              onPressed: (value) {
+                print(value);
+              },
             ),
             SizedBox(height: 50),
             Row(

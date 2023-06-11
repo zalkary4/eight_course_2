@@ -12,3 +12,14 @@ const q6 = Quiz('Ай жерден чонбу?', false);
 const q5 = Quiz('Жер тоголокпу?', true);
 const q7 = Quiz('Балык суйлой алабы?', false);
 const q8 = Quiz('Муз куйобу?', false);
+
+const quizzes = <Quiz>[
+  q1,
+  q2,
+  q3,
+  q4,
+  q5,
+  q6,
+  q7,
+  q8,
+];

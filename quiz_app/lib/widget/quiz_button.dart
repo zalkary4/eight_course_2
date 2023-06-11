@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class QuizButton extends StatelessWidget {
-  const QuizButton(this.isTrue, {super.key});
+  const QuizButton(this.isTrue, {super.key, required this.onPressed});
   final bool isTrue;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -11,7 +12,7 @@ class QuizButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             backgroundColor: isTrue ? Colors.green : Colors.red),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           isTrue ? 'Туура' : 'Туура эмес',
           style: const TextStyle(

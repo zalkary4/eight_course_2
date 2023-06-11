@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/model/quiz_model.dart';
 import 'package:quiz_app/widget/quiz_button.dart';
 import 'package:quiz_app/widget/result_icon.dart';
 
@@ -10,6 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int index = 6;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,21 +24,27 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Spacer(),
             Text(
-              'Кыргызстанда 7 область барбы?',
+              quizzes[index].question,
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
             Spacer(),
-            QuizButton(true),
+            QuizButton(
+              true,
+              onPressed: () {},
+            ),
             SizedBox(height: 20),
-            QuizButton(false),
+            QuizButton(
+              false,
+              onPressed: () {},
+            ),
             SizedBox(height: 50),
             Row(
               children: [

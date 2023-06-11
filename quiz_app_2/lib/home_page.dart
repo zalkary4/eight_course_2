@@ -11,8 +11,24 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int index = 6;
-  void tecksher() {}
+  int index = 0;
+  List jooptor = <bool>[];
+  void tecksher(bool value1) {
+    if (quizzes[index].answer == value1) {
+      jooptor.add(true);
+    } else {
+      jooptor.add(false);
+    }
+    setState(() {
+      if (quizzes[index] == quizzes.last) {
+        index = 0;
+        jooptor.clear();
+      } else {
+        index++;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,28 +52,32 @@ class _HomePageState extends State<HomePage> {
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
-            Spacer(),
+            const Spacer(),
             QuizButton(
               true,
               onPressed: (value) {
-                print(value);
+                tecksher(value);
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             QuizButton(
               false,
               onPressed: (value) {
-                print(value);
+                tecksher(value);
               },
             ),
-            SizedBox(height: 50),
-            Row(
-              children: [
-                ResultIcon(true),
-                ResultIcon(false),
-              ],
+            const SizedBox(height: 50),
+            SizedBox(
+              height: 40,
+              child: ListView.builder(
+                itemCount: jooptor.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (BuildContext context, int i) {
+                  return jooptor[i] ? ResultIcon(true) : ResultIcon(false);
+                },
+              ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
           ],
         ),
       ),

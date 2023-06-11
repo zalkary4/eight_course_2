@@ -13,11 +13,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int index = 0;
   List jooptor = <bool>[];
+  List tuuraJooptor = <bool>[];
+  List kataJooptor = <bool>[];
   void tecksher(bool value1) {
     if (quizzes[index].answer == value1) {
       jooptor.add(true);
+      tuuraJooptor.add(true);
     } else {
       jooptor.add(false);
+      kataJooptor.add(false);
     }
     setState(
       () {
@@ -28,11 +32,14 @@ class _HomePageState extends State<HomePage> {
             builder: (context) {
               return AlertDialog(
                 title: Text('Test is finished'),
-                content: Text('tuura joop: ${jooptor.contains(true)}'),
+                content: Text(
+                    'tuura joop: ${tuuraJooptor.length} / kata jooptor ${kataJooptor.length}'),
               );
             },
           );
           jooptor.clear();
+          // tuuraJooptor.clear();
+          // kataJooptor.clear();
         } else {
           index++;
         }

@@ -30,7 +30,8 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: Row(
               children: [
-                StatusCard(),
+                StatusCard(icon: Icons.male, text: AppText.male),
+                StatusCard(icon: Icons.female, text: AppText.female),
               ],
             ),
           ),
@@ -54,19 +55,19 @@ class StatusCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
+    return Expanded(
       child: Card(
         color: AppColor.cardColor,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
-              Icons.male,
+              icon,
               size: 40,
             ),
             Text(
-              AppText.male,
-              style: TextStyle(
+              text,
+              style: const TextStyle(
                 color: AppColor.greyText,
                 fontSize: 24,
               ),

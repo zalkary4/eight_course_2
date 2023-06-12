@@ -1,4 +1,5 @@
 import 'package:bmi_ui/components/calculate_button.dart';
+import 'package:bmi_ui/components/status_card.dart';
 import 'package:bmi_ui/utils/app_colors.dart';
 import 'package:bmi_ui/utils/app_texts.dart';
 import 'package:flutter/material.dart';
@@ -25,56 +26,25 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
       ),
-      body: const Column(
-        children: [
-          Expanded(
-            child: Row(
-              children: [
-                StatusCard(icon: Icons.male, text: AppText.male),
-                StatusCard(icon: Icons.female, text: AppText.female),
-              ],
-            ),
-          ),
-          Expanded(child: Text('data')),
-          Expanded(child: Text('data')),
-          CalculateButton(),
-        ],
-      ),
-    );
-  }
-}
-
-class StatusCard extends StatelessWidget {
-  const StatusCard({
-    super.key,
-    required this.icon,
-    required this.text,
-  });
-  final IconData icon;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Card(
-        color: AppColor.cardColor,
+      body: const Padding(
+        padding: EdgeInsets.all(13.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              size: 40,
-            ),
-            Text(
-              text,
-              style: const TextStyle(
-                color: AppColor.greyText,
-                fontSize: 24,
+            Expanded(
+              child: Row(
+                children: [
+                  StatusCard(icon: Icons.male, text: AppText.male),
+                  SizedBox(width: 20),
+                  StatusCard(icon: Icons.female, text: AppText.female),
+                ],
               ),
             ),
+            Expanded(child: Text('data')),
+            Expanded(child: Text('data')),
           ],
         ),
       ),
+      bottomNavigationBar: const CalculateButton(),
     );
   }
 }

@@ -13,8 +13,16 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: const Color(0xff0a0f20),
       appBar: AppBar(
         backgroundColor: const Color(0xff0a0f20),
-        title: const Text('BMI calculator'),
+        title: const Text(
+          'BMI calculator',
+          style: TextStyle(fontSize: 28),
+        ),
         centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          Expanded(child: Text('data')),
+        ],
       ),
     );
   }

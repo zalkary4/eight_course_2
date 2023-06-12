@@ -1,3 +1,5 @@
+import 'package:bmi_ui/components/calculate_button.dart';
+import 'package:bmi_ui/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,9 +12,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff0a0f20),
+      backgroundColor: AppColor.backgroundColor,
       appBar: AppBar(
-        backgroundColor: const Color(0xff0a0f20),
+        backgroundColor: AppColor.backgroundColor,
         title: const Text(
           'BMI calculator',
           style: TextStyle(
@@ -22,26 +24,12 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
       ),
-      body: Column(
+      body: const Column(
         children: [
           Expanded(child: Text('data')),
           Expanded(child: Text('data')),
           Expanded(child: Text('data')),
-          Container(
-            height: 50,
-            color: const Color(0xfff50d57),
-            width: double.infinity,
-            child: const Center(
-              child: Text(
-                'CALCULATE',
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.w700,
-                  height: 0.8,
-                ),
-              ),
-            ),
-          ),
+          CalculateButton(),
         ],
       ),
     );

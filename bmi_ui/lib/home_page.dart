@@ -39,8 +39,28 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Expanded(child: Text('data')),
-            Expanded(child: Text('data')),
+            SizedBox(height: 20),
+            Expanded(
+              child: Card(
+                color: AppColor.cardColor,
+                child: Column(
+                  children: [
+                    Row(),
+                    Text('data'),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Expanded(
+              child: Row(
+                children: [
+                  StatusCard(icon: Icons.male, text: AppText.male),
+                  SizedBox(width: 20),
+                  StatusCard(icon: Icons.female, text: AppText.female),
+                ],
+              ),
+            ),
           ],
         ),
       ),

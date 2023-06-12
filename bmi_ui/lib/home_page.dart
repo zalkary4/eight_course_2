@@ -15,13 +15,33 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: const Color(0xff0a0f20),
         title: const Text(
           'BMI calculator',
-          style: TextStyle(fontSize: 28),
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         centerTitle: true,
       ),
       body: Column(
         children: [
           Expanded(child: Text('data')),
+          Expanded(child: Text('data')),
+          Expanded(child: Text('data')),
+          Container(
+            height: 50,
+            color: const Color(0xfff50d57),
+            width: double.infinity,
+            child: const Center(
+              child: Text(
+                'CALCULATE',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w700,
+                  height: 0.8,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

@@ -49,11 +49,11 @@ class _HomePageState extends State<HomePage> {
                     const Text(
                       AppText.height,
                       style: TextStyle(
-                        fontSize: 36,
+                        fontSize: 26,
                         color: AppColor.whiteText,
                       ),
                     ),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -79,17 +79,20 @@ class _HomePageState extends State<HomePage> {
                       onChanged: (value) {},
                       min: 0.0,
                       max: 250,
-                    )
+                      thumbColor: AppColor.buttonColor,
+                      activeColor: AppColor.whiteText,
+                      inactiveColor: AppColor.inactiveColor,
+                    ),
                   ],
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 5),
             const Expanded(
               child: Row(
                 children: [
                   StatusCard(icon: Icons.male, text: AppText.male),
-                  SizedBox(width: 20),
+                  SizedBox(width: 10),
                   StatusCard(icon: Icons.female, text: AppText.female),
                 ],
               ),

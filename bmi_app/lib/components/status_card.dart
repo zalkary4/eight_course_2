@@ -20,14 +20,14 @@ class StatusCard extends StatelessWidget {
           children: [
             Icon(
               icon,
-              size: 40,
+              size: 30,
             ),
             const SizedBox(height: 10),
             Text(
               text,
               style: const TextStyle(
                 color: AppColor.greyText,
-                fontSize: 24,
+                fontSize: 20,
               ),
             ),
           ],

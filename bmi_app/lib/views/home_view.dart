@@ -16,6 +16,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   // double height = 180;
+  bool isFemale = false;
+  int height = 180;
+  int weight = 60;
+  int age = 28;
+
+  /////////
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +34,7 @@ class _HomePageState extends State<HomePage> {
           style: AppTextStyle.titleStyle,
         ),
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(15.0),
         child: Column(
           children: [
@@ -36,11 +42,32 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 children: [
                   StatusCard(
-                      child: MaleFemale(icon: Icons.male, text: AppText.male)),
-                  SizedBox(width: 20),
+                      child: InkWell(
+                    onTap: () {
+                      setState(() {
+                        isFemale = false;
+                      });
+                    },
+                    child: MaleFemale(
+                      icon: Icons.male,
+                      text: AppText.male,
+                      isFemal: !isFemale,
+                    ),
+                  )),
+                  const SizedBox(width: 20),
                   StatusCard(
-                      child:
-                          MaleFemale(icon: Icons.female, text: AppText.female)),
+                      child: InkWell(
+                    onTap: () {
+                      setState(() {
+                        isFemale = true;
+                      });
+                    },
+                    child: MaleFemale(
+                      icon: Icons.female,
+                      text: AppText.female,
+                      isFemal: isFemale,
+                    ),
+                  )),
                 ],
               ),
             ),

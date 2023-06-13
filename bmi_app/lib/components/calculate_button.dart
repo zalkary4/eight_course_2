@@ -1,4 +1,6 @@
 import 'package:bmi_app/utils/app_colors.dart';
+import 'package:bmi_app/utils/app_texts.dart';
+import 'package:bmi_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CalculateButton extends StatelessWidget {
@@ -18,12 +20,8 @@ class CalculateButton extends StatelessWidget {
         width: double.infinity,
         child: const Center(
           child: Text(
-            'CALCULATE',
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.w700,
-              height: 0.8,
-            ),
+            AppText.calculate,
+            style: AppTextStyle.titleStyle,
           ),
         ),
       ),

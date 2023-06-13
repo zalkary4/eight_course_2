@@ -34,7 +34,20 @@ class StatusCard2 extends StatelessWidget {
               ),
             ),
             Row(
-              children: [],
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FloatingActionButton(
+                  backgroundColor: AppColor.button2Color,
+                  onPressed: () {},
+                  child: Icon(Icons.add),
+                ),
+                SizedBox(width: 20),
+                FloatingActionButton(
+                  backgroundColor: AppColor.button2Color,
+                  onPressed: () {},
+                  child: Icon(Icons.remove),
+                ),
+              ],
             )
           ],
         ),

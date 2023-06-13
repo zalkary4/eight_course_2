@@ -21,37 +21,46 @@ class StatusCard2 extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 36,
                 color: AppColor.whiteText,
               ),
             ),
             Text(
               '$value',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 36,
                 color: AppColor.whiteText,
               ),
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FloatingActionButton(
-                  backgroundColor: AppColor.button2Color,
-                  onPressed: () {},
-                  child: Icon(Icons.add),
-                ),
+                RemoveAddButton(iconData: Icons.remove),
                 SizedBox(width: 20),
-                FloatingActionButton(
-                  backgroundColor: AppColor.button2Color,
-                  onPressed: () {},
-                  child: Icon(Icons.remove),
-                ),
+                RemoveAddButton(iconData: Icons.add),
               ],
             )
           ],
         ),
       ),
+    );
+  }
+}
+
+class RemoveAddButton extends StatelessWidget {
+  const RemoveAddButton({
+    super.key,
+    required this.iconData,
+  });
+  final IconData iconData;
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      backgroundColor: AppColor.button2Color,
+      foregroundColor: AppColor.whiteText,
+      onPressed: () {},
+      child: Icon(iconData),
     );
   }
 }

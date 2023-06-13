@@ -98,9 +98,9 @@ class _HomePageState extends State<HomePage> {
             const Expanded(
               child: Row(
                 children: [
-                  StatusCard2(text: AppText.male, value: 60),
+                  StatusCard2(text: AppText.weight, value: 60),
                   SizedBox(width: 10),
-                  StatusCard2(text: AppText.female, value: 28),
+                  StatusCard2(text: AppText.age, value: 28),
                 ],
               ),
             ),

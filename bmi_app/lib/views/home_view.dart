@@ -2,6 +2,7 @@ import 'package:bmi_app/components/calculate_button.dart';
 import 'package:bmi_app/components/status_card.dart';
 import 'package:bmi_app/utils/app_colors.dart';
 import 'package:bmi_app/utils/app_texts.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                         color: AppColor.whiteText,
                       ),
                     ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -74,14 +75,14 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    Slider(
+                    CupertinoSlider(
                       value: 180,
                       onChanged: (value) {},
                       min: 0.0,
                       max: 250,
                       thumbColor: AppColor.buttonColor,
                       activeColor: AppColor.whiteText,
-                      inactiveColor: AppColor.inactiveColor,
+                      // inactiveColor: AppColor.inactiveColor,
                     ),
                   ],
                 ),

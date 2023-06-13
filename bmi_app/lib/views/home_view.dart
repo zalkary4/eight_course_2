@@ -1,5 +1,6 @@
 import 'package:bmi_app/components/calculate_button.dart';
 import 'package:bmi_app/components/status_card.dart';
+import 'package:bmi_app/components/status_card2.dart';
 import 'package:bmi_app/utils/app_colors.dart';
 import 'package:bmi_app/utils/app_texts.dart';
 import 'package:flutter/cupertino.dart';
@@ -75,14 +76,19 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    CupertinoSlider(
-                      value: 180,
-                      onChanged: (value) {},
-                      min: 0.0,
-                      max: 250,
-                      thumbColor: AppColor.buttonColor,
-                      activeColor: AppColor.whiteText,
-                      // inactiveColor: AppColor.inactiveColor,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 22),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: CupertinoSlider(
+                          value: 180,
+                          onChanged: (value) {},
+                          min: 0.0,
+                          max: 250,
+                          thumbColor: AppColor.buttonColor,
+                          activeColor: AppColor.whiteText,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -92,9 +98,9 @@ class _HomePageState extends State<HomePage> {
             const Expanded(
               child: Row(
                 children: [
-                  StatusCard(icon: Icons.male, text: AppText.male),
+                  StatusCard2(text: AppText.male, value: 60),
                   SizedBox(width: 10),
-                  StatusCard(icon: Icons.female, text: AppText.female),
+                  StatusCard2(text: AppText.female, value: 28),
                 ],
               ),
             ),

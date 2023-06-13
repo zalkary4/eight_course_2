@@ -21,11 +21,11 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: AppColor.backgroundColor,
       appBar: AppBar(
         backgroundColor: AppColor.backgroundColor,
+        centerTitle: true,
         title: const Text(
           AppText.appBarTitle,
           style: AppTextStyle.titleStyle,
         ),
-        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),

@@ -1,6 +1,6 @@
 import 'package:bmi_app/utils/app_colors.dart';
 import 'package:bmi_app/utils/app_texts.dart';
-import 'package:bmi_app/utils/text_styles.dart';
+import 'package:bmi_app/utils/text_style.dart';
 import 'package:flutter/material.dart';
 
 class CalculateButton extends StatelessWidget {
@@ -11,11 +11,9 @@ class CalculateButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        print('pusshed');
-      },
+      onTap: () {},
       child: Container(
-        height: 50,
+        height: 70,
         color: AppColor.buttonColor,
         width: double.infinity,
         child: const Center(

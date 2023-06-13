@@ -1,4 +1,5 @@
 import 'package:bmi_app/utils/app_colors.dart';
+import 'package:bmi_app/utils/text_style.dart';
 import 'package:flutter/material.dart';
 
 class StatusCard extends StatelessWidget {
@@ -20,15 +21,12 @@ class StatusCard extends StatelessWidget {
           children: [
             Icon(
               icon,
-              size: 30,
+              size: 80,
             ),
             const SizedBox(height: 10),
             Text(
               text,
-              style: const TextStyle(
-                color: AppColor.greyText,
-                fontSize: 20,
-              ),
+              style: AppTextStyle.greyTextStyle,
             ),
           ],
         ),

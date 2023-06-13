@@ -1,4 +1,5 @@
 import 'package:bmi_app/utils/app_colors.dart';
+import 'package:bmi_app/utils/text_style.dart';
 import 'package:flutter/material.dart';
 
 class StatusCard2 extends StatelessWidget {
@@ -21,17 +22,11 @@ class StatusCard2 extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
               text,
-              style: const TextStyle(
-                fontSize: 36,
-                color: AppColor.whiteText,
-              ),
+              style: AppTextStyle.greyTextStyle,
             ),
             Text(
               '$value',
-              style: const TextStyle(
-                fontSize: 36,
-                color: AppColor.whiteText,
-              ),
+              style: AppTextStyle.valueStyle,
             ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -40,7 +35,7 @@ class StatusCard2 extends StatelessWidget {
                 SizedBox(width: 20),
                 RemoveAddButton(iconData: Icons.add),
               ],
-            )
+            ),
           ],
         ),
       ),

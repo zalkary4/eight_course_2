@@ -1,8 +1,11 @@
+import 'dart:math';
+
 import 'package:bmi_app/components/calculate_button.dart';
 import 'package:bmi_app/components/status_card.dart';
 import 'package:bmi_app/components/status_card2.dart';
 import 'package:bmi_app/utils/app_colors.dart';
 import 'package:bmi_app/utils/app_texts.dart';
+import 'package:bmi_app/utils/text_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  double height = 180;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,15 +25,12 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: AppColor.backgroundColor,
         title: const Text(
           AppText.appBarTitle,
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.w600,
-          ),
+          style: AppTextStyle.titleStyle,
         ),
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(13.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
             const Expanded(
@@ -50,29 +51,19 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     const Text(
                       AppText.height,
-                      style: TextStyle(
-                        fontSize: 26,
-                        color: AppColor.whiteText,
-                      ),
+                      style: AppTextStyle.greyTextStyle,
                     ),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Text(
-                          '180',
-                          style: TextStyle(
-                            fontSize: 36,
-                            color: AppColor.whiteText,
-                          ),
+                          '${height.toInt()}',
+                          style: AppTextStyle.valueStyle,
                         ),
-                        Text(
+                        const Text(
                           AppText.cm,
-                          style: TextStyle(
-                            height: 2,
-                            color: AppColor.greyText,
-                            fontSize: 18,
-                          ),
+                          style: AppTextStyle.greyTextStyle,
                         ),
                       ],
                     ),
@@ -81,8 +72,13 @@ class _HomePageState extends State<HomePage> {
                       child: SizedBox(
                         width: double.infinity,
                         child: CupertinoSlider(
-                          value: 180,
-                          onChanged: (value) {},
+                          value: height,
+                          onChanged: (value) {
+                            setState(() {
+                              height = value;
+                            });
+                          },
+                          onChangeStart: (value) {},
                           min: 0.0,
                           max: 250,
                           thumbColor: AppColor.buttonColor,

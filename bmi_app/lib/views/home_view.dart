@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:bmi_app/components/calculate_button.dart';
 import 'package:bmi_app/components/status_card.dart';
 import 'package:bmi_app/components/status_card2.dart';

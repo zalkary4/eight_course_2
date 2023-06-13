@@ -26,11 +26,11 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(13.0),
+      body: Padding(
+        padding: const EdgeInsets.all(13.0),
         child: Column(
           children: [
-            Expanded(
+            const Expanded(
               child: Row(
                 children: [
                   StatusCard(icon: Icons.male, text: AppText.male),
@@ -39,25 +39,53 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: Card(
                 color: AppColor.cardColor,
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(AppText.height),
-                    Row(
+                    const Text(
+                      AppText.height,
+                      style: TextStyle(
+                        fontSize: 36,
+                        color: AppColor.whiteText,
+                      ),
+                    ),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text('180'),
-                        Text(AppText.cm),
+                        Text(
+                          '180',
+                          style: TextStyle(
+                            fontSize: 36,
+                            color: AppColor.whiteText,
+                          ),
+                        ),
+                        Text(
+                          AppText.cm,
+                          style: TextStyle(
+                            height: 2,
+                            color: AppColor.greyText,
+                            fontSize: 18,
+                          ),
+                        ),
                       ],
                     ),
+                    Slider(
+                      value: 180,
+                      onChanged: (value) {},
+                      min: 0.0,
+                      max: 250,
+                    )
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 20),
-            Expanded(
+            const SizedBox(height: 20),
+            const Expanded(
               child: Row(
                 children: [
                   StatusCard(icon: Icons.male, text: AppText.male),

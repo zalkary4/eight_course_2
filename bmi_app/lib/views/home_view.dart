@@ -1,10 +1,11 @@
 import 'package:bmi_app/components/calculate_button.dart';
+import 'package:bmi_app/components/height.dart';
+import 'package:bmi_app/components/male_female.dart';
 import 'package:bmi_app/components/status_card.dart';
-import 'package:bmi_app/components/status_card2.dart';
+import 'package:bmi_app/components/weight_age.dart';
 import 'package:bmi_app/utils/app_colors.dart';
 import 'package:bmi_app/utils/app_texts.dart';
 import 'package:bmi_app/utils/text_style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  double height = 180;
+  // double height = 180;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,74 +28,32 @@ class _HomePageState extends State<HomePage> {
           style: AppTextStyle.titleStyle,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
+      body: const Padding(
+        padding: EdgeInsets.all(15.0),
         child: Column(
           children: [
-            const Expanded(
+            Expanded(
               child: Row(
                 children: [
-                  StatusCard(icon: Icons.male, text: AppText.male),
+                  StatusCard(
+                      child: MaleFemale(icon: Icons.male, text: AppText.male)),
                   SizedBox(width: 20),
-                  StatusCard(icon: Icons.female, text: AppText.female),
+                  StatusCard(
+                      child:
+                          MaleFemale(icon: Icons.female, text: AppText.female)),
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
+            StatusCard(child: Height()),
+            SizedBox(height: 5),
             Expanded(
-              child: Card(
-                color: AppColor.cardColor,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      AppText.height,
-                      style: AppTextStyle.greyTextStyle,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          '${height.toInt()}',
-                          style: AppTextStyle.valueStyle,
-                        ),
-                        const Text(
-                          AppText.cm,
-                          style: AppTextStyle.greyTextStyle,
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 22),
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: CupertinoSlider(
-                          value: height,
-                          onChanged: (value) {
-                            setState(() {
-                              height = value;
-                            });
-                          },
-                          onChangeStart: (value) {},
-                          min: 0.0,
-                          max: 250,
-                          thumbColor: AppColor.buttonColor,
-                          activeColor: AppColor.whiteText,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            const SizedBox(height: 5),
-            const Expanded(
               child: Row(
                 children: [
-                  StatusCard2(text: AppText.weight, value: 60),
+                  StatusCard(
+                      child: WeightEight(text: AppText.height, value: 60)),
                   SizedBox(width: 10),
-                  StatusCard2(text: AppText.age, value: 28),
+                  StatusCard(child: WeightEight(text: AppText.age, value: 28)),
                 ],
               ),
             ),

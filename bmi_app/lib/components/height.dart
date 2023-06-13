@@ -6,7 +6,11 @@ import 'package:flutter/cupertino.dart';
 class Height extends StatelessWidget {
   const Height({
     super.key,
+    required this.height,
+    required this.onChanged,
   });
+  final int height;
+  final void Function(double)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +21,15 @@ class Height extends StatelessWidget {
           AppText.height,
           style: AppTextStyle.greyTextStyle,
         ),
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Text(
-              '180',
+              '$height',
               style: AppTextStyle.valueStyle,
             ),
-            Text(
+            const Text(
               AppText.cm,
               style: AppTextStyle.greyTextStyle,
             ),
@@ -36,9 +40,8 @@ class Height extends StatelessWidget {
           child: SizedBox(
             width: double.infinity,
             child: CupertinoSlider(
-              value: 180,
-              onChanged: (value) {},
-              onChangeStart: (value) {},
+              value: height.toDouble(),
+              onChanged: onChanged,
               min: 0.0,
               max: 250,
               thumbColor: AppColor.buttonColor,

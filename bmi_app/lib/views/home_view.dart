@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
             Expanded(
@@ -72,15 +72,52 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(height: 20),
-            StatusCard(child: Height()),
+            StatusCard(
+                child: Height(
+              height: height,
+              onChanged: (val) {
+                setState(() {
+                  height = val.toInt();
+                });
+              },
+            )),
             SizedBox(height: 5),
             Expanded(
               child: Row(
                 children: [
                   StatusCard(
-                      child: WeightEight(text: AppText.height, value: 60)),
+                    child: WeightEight(
+                      text: AppText.height,
+                      value: weight,
+                      add: (c) {
+                        setState(() {
+                          weight = c;
+                        });
+                      },
+                      remove: (c) {
+                        setState(() {
+                          weight = c;
+                        });
+                      },
+                    ),
+                  ),
                   SizedBox(width: 10),
-                  StatusCard(child: WeightEight(text: AppText.age, value: 28)),
+                  StatusCard(
+                    child: WeightEight(
+                      add: (c) {
+                        setState(() {
+                          age = c;
+                        });
+                      },
+                      remove: (c) {
+                        setState(() {
+                          age = c;
+                        });
+                      },
+                      text: AppText.age,
+                      value: age,
+                    ),
+                  ),
                 ],
               ),
             ),

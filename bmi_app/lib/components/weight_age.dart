@@ -7,10 +7,14 @@ class WeightEight extends StatelessWidget {
     super.key,
     required this.text,
     required this.value,
+    required this.remove,
+    required this.add,
   });
 
   final String text;
   final int value;
+  final void Function(int)? remove;
+  final void Function(int)? add;
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +30,18 @@ class WeightEight extends StatelessWidget {
           '$value',
           style: AppTextStyle.valueStyle,
         ),
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            RemoveAddButton(iconData: Icons.remove),
-            SizedBox(width: 20),
-            RemoveAddButton(iconData: Icons.add),
+            RemoveAddButton(
+              iconData: Icons.remove,
+              onPressed: () => remove,
+            ),
+            const SizedBox(width: 20),
+            RemoveAddButton(
+              iconData: Icons.add,
+              onPressed: () => add,
+            ),
           ],
         ),
       ],
@@ -43,14 +53,16 @@ class RemoveAddButton extends StatelessWidget {
   const RemoveAddButton({
     super.key,
     required this.iconData,
+    required this.onPressed,
   });
   final IconData iconData;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
       backgroundColor: AppColor.button2Color,
       foregroundColor: AppColor.whiteText,
-      onPressed: () {},
+      onPressed: onPressed,
       child: Icon(iconData),
     );
   }

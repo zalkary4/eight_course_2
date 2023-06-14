@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                       },
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   StatusCard(
                     child: WeightEight(
                       add: (c) {

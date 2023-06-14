@@ -13,8 +13,8 @@ class WeightEight extends StatelessWidget {
 
   final String text;
   final int value;
-  final void Function(int)? remove;
-  final void Function(int)? add;
+  final void Function(int) remove;
+  final void Function(int) add;
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +35,12 @@ class WeightEight extends StatelessWidget {
           children: [
             RemoveAddButton(
               iconData: Icons.remove,
-              onPressed: () => remove,
+              onPressed: () => remove(value),
             ),
             const SizedBox(width: 20),
             RemoveAddButton(
               iconData: Icons.add,
-              onPressed: () => add,
+              onPressed: () => add(value),
             ),
           ],
         ),

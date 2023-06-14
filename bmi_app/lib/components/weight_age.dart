@@ -3,7 +3,7 @@ import 'package:bmi_app/utils/text_style.dart';
 import 'package:flutter/material.dart';
 
 class WeightEight extends StatelessWidget {
-  const WeightEight({
+  WeightEight({
     super.key,
     required this.text,
     required this.value,
@@ -12,7 +12,7 @@ class WeightEight extends StatelessWidget {
   });
 
   final String text;
-  final int value;
+  int value;
   final void Function(int) remove;
   final void Function(int) add;
 

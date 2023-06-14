@@ -124,7 +124,9 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: const CalculateButton(),
+      bottomNavigationBar: CalculateButton(
+        onTap: () {},
+      ),
     );
   }
 }

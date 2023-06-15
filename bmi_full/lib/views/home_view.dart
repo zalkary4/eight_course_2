@@ -156,6 +156,7 @@ Future<void> showMyDialog(BuildContext context, String text) async {
           child: Text(
             text,
             style: AppTextStyle.resTextStyle,
+            textAlign: TextAlign.center,
           ),
         ),
         actions: [

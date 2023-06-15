@@ -21,4 +21,8 @@ class AppTextStyle {
     fontWeight: FontWeight.w700,
     height: 0.3,
   );
+  static const TextStyle resTextStyle = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.w700,
+  );
 }

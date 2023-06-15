@@ -143,3 +143,29 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+Future<void> showMyDialog(BuildContext context, String text) async {
+  return showDialog(
+    context: context,
+    barrierDismissible: false,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text(AppText.appBarTitle),
+        content: Center(
+          child: Text(
+            text,
+            style: AppTextStyle.titleStyle,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: const Text(AppText.backButton),
+          ),
+        ],
+      );
+    },
+  );
+}

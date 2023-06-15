@@ -149,8 +149,17 @@ Future<void> showMyDialog(BuildContext context, String text) async {
     context: context,
     builder: (BuildContext context) => AlertDialog(
       backgroundColor: AppColor.backgroundColor,
-      title: const Center(child: Text(AppText.appBarTitle)),
-      content: Text(text, style: AppTextStyle.resTextStyle),
+      title: const Center(
+        child: Text(
+          AppText.appBarTitle,
+          style: AppTextStyle.resTextStyle,
+        ),
+      ),
+      content: Text(
+        text,
+        style: AppTextStyle.resTextStyle,
+        textAlign: TextAlign.center,
+      ),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),

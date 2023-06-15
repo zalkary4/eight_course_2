@@ -7,6 +7,7 @@ import 'package:bmi_full/utils/app_colors.dart';
 import 'package:bmi_full/utils/app_texts.dart';
 import 'package:bmi_full/utils/text_style.dart';
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -126,7 +127,8 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: CalculateButton(
         onTap: () {
-          final res = (weight) / (height / 100) * (height / 100);
+          final res = weight / math.pow(height / 100, 2);
+          // final res = (weight) / (height / 100) * (height / 100);
           if (res <= 18.4) {
             print('good');
           } else if (res >= 18.5 && res <= 24.9) {

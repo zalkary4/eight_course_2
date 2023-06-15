@@ -125,7 +125,18 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       bottomNavigationBar: CalculateButton(
-        onTap: () {},
+        onTap: () {
+          final res = (weight) / (height / 100) * (height / 100);
+          if (res <= 18.4) {
+            print('good');
+          } else if (res >= 18.5 && res <= 24.9) {
+            print('norm');
+          } else if (res >= 25) {
+            print('too much');
+          } else {
+            print('something is wrong');
+          }
+        },
       ),
     );
   }

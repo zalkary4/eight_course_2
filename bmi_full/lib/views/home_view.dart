@@ -145,29 +145,46 @@ class _HomePageState extends State<HomePage> {
 }
 
 Future<void> showMyDialog(BuildContext context, String text) async {
-  return showDialog(
+  return showDialog<void>(
     context: context,
-    barrierDismissible: false,
-    builder: (BuildContext context) {
-      return AlertDialog(
-        backgroundColor: AppColor.backgroundColor,
-        title: const Center(child: Text(AppText.appBarTitle)),
-        content: Center(
-          child: Text(
-            text,
-            style: AppTextStyle.resTextStyle,
-            textAlign: TextAlign.center,
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            child: const Text(AppText.backButton),
-          ),
-        ],
-      );
-    },
+    builder: (BuildContext context) => AlertDialog(
+      backgroundColor: AppColor.backgroundColor,
+      title: const Center(child: Text(AppText.appBarTitle)),
+      content: Center(child: Text(text, style: AppTextStyle.resTextStyle)),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.pop(context),
+          child: const Text(AppText.backButton),
+        )
+      ],
+    ),
   );
 }
+
+// Future<void> showMyDialog(BuildContext context, String text) async {
+//   return showDialog(
+//     context: context,
+//     barrierDismissible: false,
+//     builder: (BuildContext context) {
+//       return AlertDialog(
+//         backgroundColor: AppColor.backgroundColor,
+//         title: const Center(child: Text(AppText.appBarTitle)),
+//         content: Center(
+//           child: Text(
+//             text,
+//             style: AppTextStyle.resTextStyle,
+//             textAlign: TextAlign.center,
+//           ),
+//         ),
+//         actions: [
+//           TextButton(
+//             onPressed: () {
+//               Navigator.of(context).pop();
+//             },
+//             child: const Text(AppText.backButton),
+//           ),
+//         ],
+//       );
+//     },
+//   );
+// }

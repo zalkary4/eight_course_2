@@ -130,13 +130,13 @@ class _HomePageState extends State<HomePage> {
           final res = weight / math.pow(height / 100, 2);
           // final res = (weight) / (height / 100) * (height / 100);
           if (res <= 18.4) {
-            print('good');
+            showMyDialog(context, AppText.thin);
           } else if (res >= 18.5 && res <= 24.9) {
-            print('norm');
+            showMyDialog(context, AppText.normal);
           } else if (res >= 25) {
-            print('too much');
+            showMyDialog(context, AppText.fat);
           } else {
-            print('something is wrong');
+            showMyDialog(context, AppText.uncountable);
           }
         },
       ),
@@ -150,7 +150,8 @@ Future<void> showMyDialog(BuildContext context, String text) async {
     barrierDismissible: false,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: const Text(AppText.appBarTitle),
+        backgroundColor: AppColor.backgroundColor,
+        title: const Center(child: Text(AppText.appBarTitle)),
         content: Center(
           child: Text(
             text,

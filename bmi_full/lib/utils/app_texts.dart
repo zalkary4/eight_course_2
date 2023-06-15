@@ -11,4 +11,5 @@ class AppText {
   static const String thin = 'You are thin';
   static const String normal = 'Normal';
   static const String fat = 'You are over weight';
+  static const String uncountable = 'Uncountable';
 }

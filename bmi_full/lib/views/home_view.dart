@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             StatusCard(
                 child: Height(
               height: height,
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                 });
               },
             )),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Expanded(
               child: Row(
                 children: [

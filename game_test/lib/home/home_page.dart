@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:game_test/constants/app_color.dart';
+import 'package:game_test/constants/app_text.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({
@@ -9,7 +11,8 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(AppText.gameTitle),
+        backgroundColor: AppColors.blue,
       ),
       body: Center(),
     );

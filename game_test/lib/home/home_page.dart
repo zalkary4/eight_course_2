@@ -10,11 +10,12 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.bgColor,
       appBar: AppBar(
-        title: Text(AppText.gameTitle),
-        backgroundColor: AppColors.blue,
+        backgroundColor: AppColors.bgColor,
+        title: const Text(AppText.gameTitle),
       ),
-      body: Center(),
+      body: const Center(),
     );
   }
 }

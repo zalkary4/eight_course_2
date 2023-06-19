@@ -13,7 +13,13 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: AppColors.bgColor,
       appBar: AppBar(
         backgroundColor: AppColors.bgColor,
-        title: const Text(AppText.gameTitle),
+        elevation: 0,
+        title: const Text(
+          AppText.gameTitle,
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
       ),
       body: const Center(),
     );

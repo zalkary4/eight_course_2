@@ -13,6 +13,15 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: AppColors.bgColor,
       appBar: AppBar(
         backgroundColor: AppColors.bgColor,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.settings,
+              color: AppColors.blue,
+            ),
+          )
+        ],
         elevation: 0,
         title: const Text(
           AppText.gameTitle,

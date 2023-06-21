@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:game_test/constants/app_color.dart';
 import 'package:game_test/constants/app_text.dart';
 
 List continents = <String>[
   'africa',
-  'asia' 'australia',
+  'asia',
+  'australia',
   'europe',
   'north_america',
   'south_america',
@@ -64,6 +66,11 @@ class MyHomePage extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(index.toString()),
+                      // Expanded(
+                      //   child: SvgPicture.asset(
+                      //     'assets/icons/continents/${continents[index]}',
+                      //   ),
+                      // ),
                     ],
                   ),
                 );

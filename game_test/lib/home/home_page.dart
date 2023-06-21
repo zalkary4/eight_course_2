@@ -39,13 +39,20 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-        const  Divider(
+          const Divider(
             height: 2,
             color: Colors.black,
             indent: 30,
             endIndent: 30,
           ),
-          GridView(gridDelegate: )
+          GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+            ),
+            itemBuilder: (context, index) {
+              return Text(index.toString());
+            },
+          ),
         ],
       ),
     );

@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:game_test/constants/app_color.dart';
 import 'package:game_test/constants/app_text.dart';
 
+List continents = <String>[
+  'africa',
+  'asia' 'australia',
+  'europe',
+  'north_america',
+  'south_america',
+];
+
 class MyHomePage extends StatelessWidget {
   const MyHomePage({
     super.key,
@@ -47,11 +55,18 @@ class MyHomePage extends StatelessWidget {
           ),
           Expanded(
             child: GridView.builder(
+              itemCount: 6,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
+                crossAxisCount: 2,
               ),
               itemBuilder: (context, index) {
-                return Text(index.toString());
+                return Card(
+                  child: Column(
+                    children: [
+                      Text(index.toString()),
+                    ],
+                  ),
+                );
               },
             ),
           ),

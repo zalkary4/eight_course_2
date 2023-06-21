@@ -20,7 +20,14 @@ class MyHomePage extends StatelessWidget {
               Icons.settings,
               color: AppColors.blue,
             ),
-          )
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.more_vert,
+              color: Colors.black,
+            ),
+          ),
         ],
         elevation: 0,
         title: const Text(

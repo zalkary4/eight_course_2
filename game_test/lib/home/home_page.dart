@@ -45,13 +45,15 @@ class MyHomePage extends StatelessWidget {
             indent: 30,
             endIndent: 30,
           ),
-          GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
+          Expanded(
+            child: GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+              ),
+              itemBuilder: (context, index) {
+                return Text(index.toString());
+              },
             ),
-            itemBuilder: (context, index) {
-              return Text(index.toString());
-            },
           ),
         ],
       ),

@@ -37,7 +37,17 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: const Center(),
+      body: Column(
+        children: [
+        const  Divider(
+            height: 2,
+            color: Colors.black,
+            indent: 30,
+            endIndent: 30,
+          ),
+          GridView(gridDelegate: )
+        ],
+      ),
     );
   }
 }

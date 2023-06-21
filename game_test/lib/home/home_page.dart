@@ -66,11 +66,12 @@ class MyHomePage extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(index.toString()),
-                      // Expanded(
-                      //   child: SvgPicture.asset(
-                      //     'assets/icons/continents/${continents[index]}',
-                      //   ),
-                      // ),
+                      Expanded(
+                        child: SvgPicture.asset(
+                          'assets/icons/continents/asia.svg',
+                          // 'assets/icons/continents/${continents[index]}',
+                        ),
+                      ),
                     ],
                   ),
                 );

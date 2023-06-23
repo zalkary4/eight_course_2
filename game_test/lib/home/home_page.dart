@@ -52,8 +52,8 @@ class MyHomePage extends StatelessWidget {
           const Divider(
             height: 2,
             color: Colors.black,
-            indent: 25,
-            endIndent: 25,
+            indent: 30,
+            endIndent: 30,
           ),
           Expanded(
             child: GridView.builder(

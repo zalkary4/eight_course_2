@@ -52,7 +52,7 @@ class MyHomePage extends StatelessWidget {
           const Divider(
             height: 2,
             color: Colors.black,
-            indent: 30,
+            indent: 25,
             endIndent: 25,
           ),
           Expanded(

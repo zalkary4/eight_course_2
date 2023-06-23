@@ -53,7 +53,7 @@ class MyHomePage extends StatelessWidget {
             height: 2,
             color: Colors.black,
             indent: 30,
-            endIndent: 30,
+            endIndent: 25,
           ),
           Expanded(
             child: GridView.builder(

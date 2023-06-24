@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:game_test/constants/app_color.dart';
 import 'package:game_test/constants/app_text.dart';
+import 'package:game_test/models/continent.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({
@@ -48,11 +49,12 @@ class MyHomePage extends StatelessWidget {
           ),
           Expanded(
             child: GridView.builder(
-              itemCount: 6,
+              itemCount: continents.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) {
+                final item = continents[index];
                 return Card(
                   child: Column(
                     children: [

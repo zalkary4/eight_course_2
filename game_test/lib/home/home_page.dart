@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:game_test/constants/app_color.dart';
@@ -58,11 +60,11 @@ class MyHomePage extends StatelessWidget {
                 return Card(
                   child: Column(
                     children: [
-                      Text(index.toString()),
+                      Text(item.name),
                       Expanded(
                         child: SvgPicture.asset(
-                          'assets/icons/continents/asia.svg',
-                          // 'assets/icons/continents/${continents[index]}',
+                          'assets/icons/continents/${item.icon}.svg',
+                          color: item.color,
                         ),
                       ),
                     ],

@@ -9,4 +9,5 @@ class Continent {
   final String name;
   final String icon;
   final Color color;
+  final Color color2;
 }

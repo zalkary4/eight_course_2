@@ -3,15 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:game_test/constants/app_color.dart';
 import 'package:game_test/constants/app_text.dart';
 
-List continents = <String>[
-  'africa',
-  'asia',
-  'australia',
-  'europe',
-  'north_america',
-  'south_america',
-];
-
 class MyHomePage extends StatelessWidget {
   const MyHomePage({
     super.key,

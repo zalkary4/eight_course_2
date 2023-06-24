@@ -42,3 +42,12 @@ final australia = Continent(
   icon: 'australia',
   color: const Color(0xff6bf782),
 );
+
+List continents = <Continent>[
+  europe,
+  asia,
+  nAmerica,
+  sAmerica,
+  africa,
+  australia
+];

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Continent {
-  Continent({
+  Continent(
+    this.color2, {
     required this.name,
     required this.icon,
     required this.color,

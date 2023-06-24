@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:game_test/constants/app_text.dart';
 
 class Continent {
   Continent({
@@ -10,3 +11,9 @@ class Continent {
   final String icon;
   final Color color;
 }
+
+final africa = Continent(
+  name: AppText.africa,
+  icon: 'africa',
+  color: Color(0xfffeef34),
+);

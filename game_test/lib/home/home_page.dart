@@ -44,7 +44,7 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: [
           const Divider(
-            height: 2,
+            height: 3,
             color: Colors.black,
             indent: 30,
             endIndent: 30,

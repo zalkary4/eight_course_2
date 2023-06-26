@@ -85,9 +85,12 @@ class ContinentCard extends StatelessWidget {
             style: const TextStyle(fontSize: 22),
           ),
           Expanded(
-            child: SvgPicture.asset(
-              'assets/icons/continents/${item.icon}.svg',
-              color: item.color,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset(
+                'assets/icons/continents/${item.icon}.svg',
+                color: item.color,
+              ),
             ),
           ),
         ],

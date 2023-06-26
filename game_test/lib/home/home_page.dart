@@ -80,6 +80,7 @@ class ContinentCard extends StatelessWidget {
     return Card(
       child: Column(
         children: [
+          const SizedBox(height: 8),
           Text(
             item.name,
             style: const TextStyle(fontSize: 22),

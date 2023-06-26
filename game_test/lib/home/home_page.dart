@@ -80,7 +80,10 @@ class ContinentCard extends StatelessWidget {
     return Card(
       child: Column(
         children: [
-          Text(item.name),
+          Text(
+            item.name,
+            style: const TextStyle(fontSize: 22),
+          ),
           Expanded(
             child: SvgPicture.asset(
               'assets/icons/continents/${item.icon}.svg',

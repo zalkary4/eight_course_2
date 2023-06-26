@@ -57,20 +57,34 @@ class MyHomePage extends StatelessWidget {
               ),
               itemBuilder: (context, index) {
                 final item = continents[index];
-                return Card(
-                  child: Column(
-                    children: [
-                      Text(item.name),
-                      Expanded(
-                        child: SvgPicture.asset(
-                          'assets/icons/continents/${item.icon}.svg',
-                          color: item.color,
-                        ),
-                      ),
-                    ],
-                  ),
-                );
+                return ContinentCard(item: continents[index]);
               },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ContinentCard extends StatelessWidget {
+  const ContinentCard({
+    super.key,
+    required this.item,
+  });
+
+  final Continent item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Column(
+        children: [
+          Text(item.name),
+          Expanded(
+            child: SvgPicture.asset(
+              'assets/icons/continents/${item.icon}.svg',
+              color: item.color,
             ),
           ),
         ],

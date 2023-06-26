@@ -56,7 +56,6 @@ class MyHomePage extends StatelessWidget {
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) {
-                final item = continents[index];
                 return ContinentCard(item: continents[index]);
               },
             ),

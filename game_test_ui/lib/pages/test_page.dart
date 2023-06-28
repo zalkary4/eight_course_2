@@ -38,20 +38,21 @@ class _TestPageState extends State<TestPage> {
             ),
           ),
           Expanded(
-              child: GridView.builder(
-            itemCount: 4,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2),
-            itemBuilder: (context, index) {
-              return Card(
-                child: Center(
-                  child: Text(
-                    index.toString(),
+            child: GridView.builder(
+              itemCount: 4,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2),
+              itemBuilder: (context, index) {
+                return Card(
+                  child: Center(
+                    child: Text(
+                      index.toString(),
+                    ),
                   ),
-                ),
-              );
-            },
-          )),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:game_test/components/test_page_app_bar_title.dart';
 import 'package:game_test/components/test_slider.dart';
+import 'package:game_test/components/variants.dart';
 import 'package:game_test/constants/app_color.dart';
 
 class TestPage extends StatefulWidget {
@@ -37,28 +38,7 @@ class _TestPageState extends State<TestPage> {
               child: Image.asset('assets/images/capitals/bishkek.jpeg'),
             ),
           ),
-          Expanded(
-            child: GridView.builder(
-              itemCount: 4,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 1.7,
-              ),
-              itemBuilder: (context, index) {
-                return Card(
-                  color: AppColors.inActive,
-                  child: InkWell(
-                    onTap: () {},
-                    child: Center(
-                      child: Text(
-                        index.toString(),
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
+          const Variants(),
         ],
       ),
     );

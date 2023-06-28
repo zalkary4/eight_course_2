@@ -15,22 +15,19 @@ class Continent {
   final List<Suroo>? suroo;
 }
 
-final africa = Continent(
-  name: AppText.africa,
-  icon: 'africa',
-  color: const Color(0xfffeef34),
-  suroo: asiaQuestions,
-);
-final asia = Continent(
-  name: AppText.asia,
-  icon: 'asia',
-  color: Color(0xfff08180),
-);
 final europe = Continent(
   name: AppText.europe,
   icon: 'europe',
   color: const Color(0xff81a2fd),
 );
+
+final asia = Continent(
+  name: AppText.asia,
+  icon: 'asia',
+  color: const Color(0xfff08180),
+  suroo: asiaQuestions,
+);
+
 final nAmerica = Continent(
   name: AppText.northAmerica,
   icon: 'north_america',
@@ -40,6 +37,11 @@ final sAmerica = Continent(
   name: AppText.southAmerica,
   icon: 'south_america',
   color: const Color(0xffe5a9e4),
+);
+final africa = Continent(
+  name: AppText.africa,
+  icon: 'africa',
+  color: const Color(0xfffeef34),
 );
 final australia = Continent(
   name: AppText.australia,

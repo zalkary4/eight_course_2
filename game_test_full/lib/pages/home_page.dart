@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:game_test/components/continent_card.dart';
 import 'package:game_test/constants/app_color.dart';

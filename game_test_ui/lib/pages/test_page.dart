@@ -22,15 +22,22 @@ class _TestPageState extends State<TestPage> {
       ),
       body: Column(
         children: [
-          SliderTheme(
-            data: SliderThemeData(
-                overlayShape: SliderComponentShape.noOverlay,
-                thumbShape: SliderComponentShape.noThumb),
-            child: Slider(
-              value: 3,
-              onChanged: (value) {},
-              min: 0,
-              max: 10,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: SliderTheme(
+              data: SliderThemeData(
+                  trackShape: const RectangularSliderTrackShape(),
+                  trackHeight: 4,
+                  overlayShape: SliderComponentShape.noOverlay,
+                  thumbShape: SliderComponentShape.noThumb),
+              child: Slider(
+                activeColor: AppColors.green,
+                inactiveColor: AppColors.inActive,
+                value: 3,
+                onChanged: (value) {},
+                min: 0,
+                max: 10,
+              ),
             ),
           ),
         ],

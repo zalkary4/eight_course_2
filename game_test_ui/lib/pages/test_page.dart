@@ -41,12 +41,18 @@ class _TestPageState extends State<TestPage> {
             child: GridView.builder(
               itemCount: 4,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2),
+                crossAxisCount: 2,
+                childAspectRatio: 1.7,
+              ),
               itemBuilder: (context, index) {
                 return Card(
-                  child: Center(
-                    child: Text(
-                      index.toString(),
+                  color: AppColors.inActive,
+                  child: InkWell(
+                    onTap: () {},
+                    child: Center(
+                      child: Text(
+                        index.toString(),
+                      ),
                     ),
                   ),
                 );

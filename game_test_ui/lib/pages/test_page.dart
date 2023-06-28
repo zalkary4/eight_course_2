@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:game_test/components/test_page_app_bar_title.dart';
+import 'package:game_test/components/test_slider.dart';
 import 'package:game_test/constants/app_color.dart';
 
 class TestPage extends StatefulWidget {
@@ -22,24 +23,34 @@ class _TestPageState extends State<TestPage> {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: SliderTheme(
-              data: SliderThemeData(
-                  trackShape: const RectangularSliderTrackShape(),
-                  trackHeight: 4,
-                  overlayShape: SliderComponentShape.noOverlay,
-                  thumbShape: SliderComponentShape.noThumb),
-              child: Slider(
-                activeColor: AppColors.green,
-                inactiveColor: AppColors.inActive,
-                value: 3,
-                onChanged: (value) {},
-                min: 0,
-                max: 10,
-              ),
+          const TestSlider(),
+          const Expanded(
+            flex: 1,
+            child: Center(
+              child: Text('Bangkok'),
             ),
           ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('assets/images/capitals/bishkek.jpeg'),
+            ),
+          ),
+          Expanded(
+              child: GridView.builder(
+            itemCount: 4,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2),
+            itemBuilder: (context, index) {
+              return Card(
+                child: Center(
+                  child: Text(
+                    index.toString(),
+                  ),
+                ),
+              );
+            },
+          )),
         ],
       ),
     );

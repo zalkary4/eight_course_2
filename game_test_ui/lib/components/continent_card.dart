@@ -6,15 +6,17 @@ class ContinentCard extends StatelessWidget {
   const ContinentCard({
     super.key,
     required this.item,
+    required this.onTap,
   });
 
   final Continent item;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
-        onTap: () {},
+        onTap: onTap,
         child: Column(
           children: [
             const SizedBox(height: 8),

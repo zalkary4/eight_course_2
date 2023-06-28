@@ -5,6 +5,7 @@ import 'package:game_test/components/continent_card.dart';
 import 'package:game_test/constants/app_color.dart';
 import 'package:game_test/constants/app_text.dart';
 import 'package:game_test/models/continent.dart';
+import 'package:game_test/pages/test_page.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({
@@ -57,7 +58,17 @@ class MyHomePage extends StatelessWidget {
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) {
-                return ContinentCard(item: continents[index]);
+                return ContinentCard(
+                  item: continents[index],
+                  onTap: () {
+                    Navigator.push<void>(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (BuildContext context) => const TestPage(),
+                      ),
+                    );
+                  },
+                );
               },
             ),
           ),

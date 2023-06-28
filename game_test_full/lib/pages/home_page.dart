@@ -72,7 +72,7 @@ class MyHomePage extends StatelessWidget {
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
-                          content: Text('Something wrong'),
+                          content: Text('Something wrong!!!'),
                         ),
                       );
                     }

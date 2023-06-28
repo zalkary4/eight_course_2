@@ -12,9 +12,9 @@ class ContinentCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Card(
+    return Card(
+      child: InkWell(
+        onTap: () {},
         child: Column(
           children: [
             const SizedBox(height: 8),
@@ -25,11 +25,9 @@ class ContinentCard extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  child: SvgPicture.asset(
-                    'assets/icons/continents/${item.icon}.svg',
-                    color: item.color,
-                  ),
+                child: SvgPicture.asset(
+                  'assets/icons/continents/${item.icon}.svg',
+                  color: item.color,
                 ),
               ),
             ),

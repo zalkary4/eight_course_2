@@ -3,14 +3,19 @@ import 'package:game_test/components/test_page_app_bar_title.dart';
 import 'package:game_test/components/test_slider.dart';
 import 'package:game_test/components/variants.dart';
 import 'package:game_test/constants/app_color.dart';
+import 'package:game_test/models/suroo.dart';
 
 class TestPage extends StatefulWidget {
-  const TestPage({Key? key}) : super(key: key);
+  TestPage({Key? key, required this.suroo}) : super(key: key);
+
+  final List<Suroo> suroo;
+
   @override
   _TestPageState createState() => _TestPageState();
 }
 
 class _TestPageState extends State<TestPage> {
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +30,9 @@ class _TestPageState extends State<TestPage> {
       body: Column(
         children: [
           const TestSlider(),
-          const Text(
-            'Bangkok',
-            style: TextStyle(
+          Text(
+            widget.suroo[index].text,
+            style: const TextStyle(
               fontSize: 32,
               height: 1.5,
             ),
@@ -35,7 +40,8 @@ class _TestPageState extends State<TestPage> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Image.asset('assets/images/capitals/bishkek.jpeg'),
+              child: Image.asset(
+                  'assets/images/capitals/${widget.suroo[index].image}.jpeg'),
             ),
           ),
           const Variants(),

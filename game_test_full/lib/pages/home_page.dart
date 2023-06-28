@@ -61,12 +61,21 @@ class MyHomePage extends StatelessWidget {
                 return ContinentCard(
                   item: continents[index],
                   onTap: () {
-                    Navigator.push<void>(
-                      context,
-                      MaterialPageRoute<void>(
-                        builder: (BuildContext context) => const TestPage(),
-                      ),
-                    );
+                    if (continents[index].suroo != null) {
+                      Navigator.push<void>(
+                        context,
+                        MaterialPageRoute<void>(
+                          builder: (BuildContext context) =>
+                              TestPage(suroo: continents[index].suroo!),
+                        ),
+                      );
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('Something wrong'),
+                        ),
+                      );
+                    }
                   },
                 );
               },

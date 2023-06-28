@@ -18,6 +18,19 @@ class Joop {
   final String text;
 }
 
+List<Suroo> asiaQuestions = [
+  s1,
+  s2,
+  s3,
+  s4,
+  s5,
+  s6,
+  s7,
+  s8,
+  s9,
+  s10,
+];
+
 const s1 = Suroo(
   text: 'Ashabad',
   jooptor: [

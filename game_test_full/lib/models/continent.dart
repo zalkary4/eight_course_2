@@ -33,16 +33,19 @@ final nAmerica = Continent(
   icon: 'north_america',
   color: const Color(0xfffeb000),
 );
+
 final sAmerica = Continent(
   name: AppText.southAmerica,
   icon: 'south_america',
   color: const Color(0xffe5a9e4),
 );
+
 final africa = Continent(
   name: AppText.africa,
   icon: 'africa',
   color: const Color(0xfffeef34),
 );
+
 final australia = Continent(
   name: AppText.australia,
   icon: 'australia',

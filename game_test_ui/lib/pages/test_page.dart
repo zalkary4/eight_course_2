@@ -20,6 +20,19 @@ class _TestPageState extends State<TestPage> {
         elevation: 0,
         title: const TestPageAppBarTitle(),
       ),
+      body: Column(
+        children: [
+          SliderTheme(
+            data: SliderThemeData(overlayShape: SliderComponentShape.noOverlay),
+            child: Slider(
+              value: 3,
+              onChanged: (value) {},
+              min: 0,
+              max: 10,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

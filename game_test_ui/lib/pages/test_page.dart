@@ -24,10 +24,11 @@ class _TestPageState extends State<TestPage> {
       body: Column(
         children: [
           const TestSlider(),
-          const Expanded(
-            flex: 1,
-            child: Center(
-              child: Text('Bangkok'),
+          const Text(
+            'Bangkok',
+            style: TextStyle(
+              fontSize: 32,
+              height: 1.5,
             ),
           ),
           Expanded(

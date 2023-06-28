@@ -17,16 +17,31 @@ class _TestPageState extends State<TestPage> {
         backgroundColor: AppColors.bgColor,
         centerTitle: true,
         elevation: 0,
-        title: const Row(
+        title: Row(
           children: [
             Card(
-              child: Padding(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)),
+              child: const Padding(
                 padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.tips_and_updates),
-                    Text('32'),
-                    Icon(Icons.add_circle),
+                    Icon(
+                      Icons.tips_and_updates,
+                      color: AppColors.yellow,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 5),
+                      child: Text(
+                        '32',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
+                    Icon(
+                      Icons.add_circle,
+                      color: AppColors.green,
+                    ),
                   ],
                 ),
               ),

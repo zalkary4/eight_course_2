@@ -48,18 +48,22 @@ class _TestPageState extends State<TestPage> {
               ),
             ),
             const Text('3'),
-            SizedBox(
-              width: 70,
-              height: 30,
-              child: ListView.builder(
-                itemCount: 3,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return const Icon(Icons.favorite, color: AppColors.red);
-                },
-              ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 70,
+                  height: 30,
+                  child: ListView.builder(
+                    itemCount: 3,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return const Icon(Icons.favorite, color: AppColors.red);
+                    },
+                  ),
+                ),
+                const Icon(Icons.more_vert),
+              ],
             ),
-            const Icon(Icons.more_vert),
           ],
         ),
       ),

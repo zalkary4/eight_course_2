@@ -23,7 +23,9 @@ class _TestPageState extends State<TestPage> {
       body: Column(
         children: [
           SliderTheme(
-            data: SliderThemeData(overlayShape: SliderComponentShape.noOverlay),
+            data: SliderThemeData(
+                overlayShape: SliderComponentShape.noOverlay,
+                thumbShape: SliderComponentShape.noThumb),
             child: Slider(
               value: 3,
               onChanged: (value) {},

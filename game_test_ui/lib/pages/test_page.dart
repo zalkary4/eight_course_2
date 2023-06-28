@@ -18,6 +18,7 @@ class _TestPageState extends State<TestPage> {
         centerTitle: true,
         elevation: 0,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Card(
               shape: RoundedRectangleBorder(
@@ -46,6 +47,19 @@ class _TestPageState extends State<TestPage> {
                 ),
               ),
             ),
+            const Text('3'),
+            SizedBox(
+              width: 70,
+              height: 30,
+              child: ListView.builder(
+                itemCount: 3,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return const Icon(Icons.favorite, color: AppColors.red);
+                },
+              ),
+            ),
+            const Icon(Icons.more_vert),
           ],
         ),
       ),

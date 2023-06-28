@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:game_test/components/test_page_app_bar_title.dart';
 import 'package:game_test/constants/app_color.dart';
 
 class TestPage extends StatefulWidget {
@@ -17,55 +18,7 @@ class _TestPageState extends State<TestPage> {
         backgroundColor: AppColors.bgColor,
         centerTitle: true,
         elevation: 0,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0)),
-              child: const Padding(
-                padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.tips_and_updates,
-                      color: AppColors.yellow,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 5),
-                      child: Text(
-                        '32',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                    Icon(
-                      Icons.add_circle,
-                      color: AppColors.green,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            const Text('3'),
-            Row(
-              children: [
-                SizedBox(
-                  width: 70,
-                  height: 30,
-                  child: ListView.builder(
-                    itemCount: 3,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return const Icon(Icons.favorite, color: AppColors.red);
-                    },
-                  ),
-                ),
-                const Icon(Icons.more_vert),
-              ],
-            ),
-          ],
-        ),
+        title: const TestPageAppBarTitle(),
       ),
     );
   }

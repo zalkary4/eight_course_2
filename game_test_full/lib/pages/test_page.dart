@@ -34,7 +34,7 @@ class _TestPageState extends State<TestPage> {
             widget.suroo[index].text,
             style: const TextStyle(
               fontSize: 32,
-              height: 1.9,
+              height: 1.5,
             ),
           ),
           Expanded(

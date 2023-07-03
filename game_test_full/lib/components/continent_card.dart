@@ -19,7 +19,7 @@ class ContinentCard extends StatelessWidget {
         onTap: onTap,
         child: Column(
           children: [
-            const SizedBox(height: 8),
+            const SizedBox(height: 9),
             Text(
               item.name,
               style: const TextStyle(fontSize: 22),

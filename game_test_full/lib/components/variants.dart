@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:game_test/constants/app_color.dart';
+import 'package:game_test/models/suroo.dart';
 
 class Variants extends StatelessWidget {
-  const Variants({
+  Variants({
+    required this.jooptor,
     super.key,
   });
+  final List<Joop> jooptor;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class Variants extends StatelessWidget {
               onTap: () {},
               child: Center(
                 child: Text(
-                  index.toString(),
+                  jooptor[index].text,
                 ),
               ),
             ),

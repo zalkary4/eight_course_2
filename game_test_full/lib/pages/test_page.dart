@@ -44,7 +44,9 @@ class _TestPageState extends State<TestPage> {
                   'assets/images/capitals/${widget.suroo[index].image}.jpeg'),
             ),
           ),
-          const Variants(),
+          Variants(
+            jooptor: widget.suroo[index].jooptor,
+          ),
         ],
       ),
     );

@@ -46,7 +46,9 @@ class _TestPageState extends State<TestPage> {
           ),
           Variants(
             jooptor: widget.suroo[index].jooptor,
-            onTap: (value){if(widget.suroo[index].jooptor)},
+            onTap: (value) {
+              if (widget.suroo[index].jooptor) {}
+            },
           ),
         ],
       ),

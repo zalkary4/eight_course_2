@@ -54,7 +54,11 @@ class _TestPageState extends State<TestPage> {
             jooptor: widget.suroo[index].jooptor,
             onTap: (value) {
               if (value == true) {
-              } else {}
+                tuuraJooptor++;
+              } else {
+                kataJooptor++;
+              }
+              index++;
               ;
             },
           ),

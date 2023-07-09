@@ -32,7 +32,8 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         // child: Text('App Bar'),
-        child: Text('$res'),
+        // child: Text('$res'),
+        child: res == null ? const CircularProgressIndicator() : Text('$res'),
       ),
     );
   }

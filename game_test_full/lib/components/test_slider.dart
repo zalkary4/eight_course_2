@@ -4,8 +4,9 @@ import 'package:game_test/constants/app_color.dart';
 class TestSlider extends StatelessWidget {
   const TestSlider({
     super.key,
+    required this.value,
   });
-
+  final int value;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,7 +20,7 @@ class TestSlider extends StatelessWidget {
         child: Slider(
           activeColor: AppColors.green,
           inactiveColor: AppColors.inActive,
-          value: 3,
+          value: value.toDouble(),
           onChanged: (value) {},
           min: 0,
           max: 10,

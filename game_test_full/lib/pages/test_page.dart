@@ -35,7 +35,9 @@ class _TestPageState extends State<TestPage> {
       ),
       body: Column(
         children: [
-          const TestSlider(),
+          TestSlider(
+            value: index,
+          ),
           Text(
             widget.suroo[index].text,
             style: const TextStyle(
@@ -67,7 +69,9 @@ class _TestPageState extends State<TestPage> {
                           index = 0;
                           kataJooptor = 0;
                           tuuraJooptor = 0;
-                          Navigator.pop(context);
+                          setState(() {
+                            Navigator.pop(context);
+                          });
                         },
                         child: Text('Cansel'),
                       )

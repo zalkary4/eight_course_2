@@ -19,15 +19,15 @@ class _TestPageState extends State<TestPage> {
   int tuuraJooptor = 0;
   int kataJooptor = 0;
   void chek(bool isTrue) {
-    if (isTrue == true) {
-      tuuraJooptor++;
-    } else {
-      kataJooptor++;
-    }
-    setState(() {
-      index++;
-    });
-    ;
+    // if (isTrue == true) {
+    //   tuuraJooptor++;
+    // } else {
+    //   kataJooptor++;
+    // }
+    // setState(() {
+    //   index++;
+    // });
+    // ;
   }
 
   @override
@@ -63,7 +63,18 @@ class _TestPageState extends State<TestPage> {
           ),
           Variants(
             jooptor: widget.suroo[index].jooptor,
-            onTap: chek,
+            onTap: (isTrue) {
+              if (isTrue == true) {
+                tuuraJooptor++;
+              } else {
+                kataJooptor++;
+              }
+              // setState(
+              //   () {
+              //     index++;
+              //   },
+              // );
+            },
           ),
         ],
       ),

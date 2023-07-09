@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -7,12 +8,24 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  dynamic res;
+  fetchData() async {
+    final dio = Dio();
+    await Future.delayed(Duration(seconds: 3));
+    res = await dio.get('https://jsonplaceholder.typicode.com/posts');
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('App Bar'),
         centerTitle: true,
+      ),
+      body: Center(
+        child: Text('App Bar'),
+        // child: Text('$res'),
       ),
     );
   }

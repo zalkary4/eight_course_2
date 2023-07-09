@@ -16,6 +16,9 @@ class TestPage extends StatefulWidget {
 
 class _TestPageState extends State<TestPage> {
   int index = 0;
+  int tuuraJooptor = 0;
+  int kataJooptor = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +50,7 @@ class _TestPageState extends State<TestPage> {
           Variants(
             jooptor: widget.suroo[index].jooptor,
             onTap: (value) {
-              if (widget.suroo[index].jooptor) {
+              if (value == true) {
               } else {}
               ;
             },

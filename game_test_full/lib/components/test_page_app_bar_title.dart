@@ -4,7 +4,11 @@ import 'package:game_test/constants/app_color.dart';
 class TestPageAppBarTitle extends StatelessWidget {
   const TestPageAppBarTitle({
     super.key,
+    required this.tuuraJoptor,
+    required this.katJoptor,
   });
+  final int tuuraJoptor;
+  final int katJoptor;
 
   @override
   Widget build(BuildContext context) {

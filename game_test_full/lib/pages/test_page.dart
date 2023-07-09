@@ -53,7 +53,7 @@ class _TestPageState extends State<TestPage> {
           Variants(
             jooptor: widget.suroo[index].jooptor,
             onTap: (isTrue) {
-              if (index == widget.suroo.length) {
+              if (index + 1 == widget.suroo.length) {
                 showDialog(
                   context: context,
                   builder: (BuildContext context) => AlertDialog(
@@ -63,28 +63,30 @@ class _TestPageState extends State<TestPage> {
                     ),
                     actions: <Widget>[
                       TextButton(
-                          onPressed: () {
-                            index = 0;
-                            kataJooptor = 0;
-                            tuuraJooptor = 0;
-                            Navigator.pop(context);
-                          },
-                          child: Text('Cansel'))
+                        onPressed: () {
+                          index = 0;
+                          kataJooptor = 0;
+                          tuuraJooptor = 0;
+                          Navigator.pop(context);
+                        },
+                        child: Text('Cansel'),
+                      )
                     ],
                   ),
                 );
-              }
-              if (widget.suroo[index] == widget.suroo.last) {}
-              if (isTrue == true) {
-                tuuraJooptor++;
               } else {
-                kataJooptor++;
+                if (isTrue == true) {
+                  tuuraJooptor++;
+                } else {
+                  kataJooptor++;
+                }
+                setState(
+                  () {
+                    index++;
+                  },
+                );
               }
-              setState(
-                () {
-                  index++;
-                },
-              );
+              // if (widget.suroo[index] == widget.suroo.last) {}
             },
           ),
         ],

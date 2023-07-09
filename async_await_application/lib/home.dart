@@ -11,9 +11,16 @@ class _HomePageState extends State<HomePage> {
   dynamic res;
   fetchData() async {
     final dio = Dio();
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 5));
     res = await dio.get('https://jsonplaceholder.typicode.com/posts');
     setState(() {});
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    fetchData();
   }
 
   @override
@@ -24,8 +31,8 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: Center(
-        child: Text('App Bar'),
-        // child: Text('$res'),
+        // child: Text('App Bar'),
+        child: Text('$res'),
       ),
     );
   }

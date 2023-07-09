@@ -28,7 +28,10 @@ class _TestPageState extends State<TestPage> {
         backgroundColor: AppColors.bgColor,
         centerTitle: true,
         elevation: 0,
-        title: const TestPageAppBarTitle(),
+        title: TestPageAppBarTitle(
+          kataJoptor: kataJooptor,
+          tuuraJoptor: tuuraJooptor,
+        ),
       ),
       body: Column(
         children: [

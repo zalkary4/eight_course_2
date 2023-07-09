@@ -24,7 +24,9 @@ class Variants extends StatelessWidget {
           return Card(
             color: AppColors.inActive,
             child: InkWell(
-              onTap: onTap(jooptor[index].isTrue),
+              onTap: () {
+                onTap(jooptor[index].isTrue);
+              },
               child: Center(
                 child: Text(
                   jooptor[index].text,

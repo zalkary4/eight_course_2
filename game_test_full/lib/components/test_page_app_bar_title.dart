@@ -34,7 +34,7 @@ class TestPageAppBarTitle extends StatelessWidget {
                 //   Icons.tips_and_updates,
                 //   color: AppColors.yellow,
                 // ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 5),
                   child: Text(
                     '32',

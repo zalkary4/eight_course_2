@@ -58,9 +58,9 @@ class _TestPageState extends State<TestPage> {
               } else {
                 kataJooptor++;
               }
-              setState(() {
-                index++;
-              });
+              // setState(() {
+              index++;
+              // });
               ;
             },
           ),

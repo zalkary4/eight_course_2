@@ -53,7 +53,7 @@ class _TestPageState extends State<TestPage> {
           Variants(
             jooptor: widget.suroo[index].jooptor,
             onTap: (isTrue) {
-              if (index > widget.suroo.length) {
+              if (index == widget.suroo.length) {
                 showDialog(
                   context: context,
                   builder: (BuildContext context) => AlertDialog(

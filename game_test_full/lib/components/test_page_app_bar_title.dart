@@ -25,7 +25,7 @@ class TestPageAppBarTitle extends StatelessWidget {
               children: [
                 Text(
                   '$kataJoptor',
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: AppColors.red,
                     fontSize: 16,
                   ),
@@ -41,9 +41,12 @@ class TestPageAppBarTitle extends StatelessWidget {
                     style: TextStyle(fontSize: 18),
                   ),
                 ),
-                Icon(
-                  Icons.add_circle,
-                  color: AppColors.green,
+                Text(
+                  '$tuuraJoptor',
+                  style: const TextStyle(
+                    color: AppColors.green,
+                    fontSize: 16,
+                  ),
                 ),
               ],
             ),

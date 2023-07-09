@@ -5,10 +5,10 @@ class TestPageAppBarTitle extends StatelessWidget {
   const TestPageAppBarTitle({
     super.key,
     required this.tuuraJoptor,
-    required this.katJoptor,
+    required this.kataJoptor,
   });
   final int tuuraJoptor;
-  final int katJoptor;
+  final int kataJoptor;
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +18,22 @@ class TestPageAppBarTitle extends StatelessWidget {
         Card(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-          child: const Padding(
+          child: Padding(
             padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  Icons.tips_and_updates,
-                  color: AppColors.yellow,
+                Text(
+                  '$kataJoptor',
+                  style: TextStyle(
+                    color: AppColors.red,
+                    fontSize: 16,
+                  ),
                 ),
+                // Icon(
+                //   Icons.tips_and_updates,
+                //   color: AppColors.yellow,
+                // ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 5),
                   child: Text(

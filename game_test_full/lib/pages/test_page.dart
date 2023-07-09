@@ -53,6 +53,28 @@ class _TestPageState extends State<TestPage> {
           Variants(
             jooptor: widget.suroo[index].jooptor,
             onTap: (isTrue) {
+              if (index > widget.suroo.length) {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) => AlertDialog(
+                    title: const Text('End of the test'),
+                    content: Text(
+                      'Tuura: $tuuraJooptor\ kata: $kataJooptor',
+                    ),
+                    actions: <Widget>[
+                      TextButton(
+                          onPressed: () {
+                            index = 0;
+                            kataJooptor = 0;
+                            tuuraJooptor = 0;
+                            Navigator.pop(context);
+                          },
+                          child: Text('Cansel'))
+                    ],
+                  ),
+                );
+              }
+              if (widget.suroo[index] == widget.suroo.last) {}
               if (isTrue == true) {
                 tuuraJooptor++;
               } else {

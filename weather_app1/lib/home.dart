@@ -13,15 +13,24 @@ class _HomePageState extends State<HomePage> {
   Future<dynamic> fetchData() async {
     final dio = Dio();
     final res = await dio.get(ApiConts.adress);
+    print(res);
     return res;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    fetchData();
   }
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('App Bar'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text('App Bar'), centerTitle: true),
+      body: FutureBuilder(
+          future: fetchData(),
+          builder: (ctx, sn) {
+            return Text(sn.toString());
+          }),
     );
   }
 }

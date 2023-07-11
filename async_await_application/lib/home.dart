@@ -11,7 +11,7 @@ class _HomePageState extends State<HomePage> {
   dynamic res;
   fetchData() async {
     final dio = Dio();
-    await Future.delayed(const Duration(seconds: 5));
+    await Future.delayed(const Duration(seconds: 3));
     res = await dio.get('https://jsonplaceholder.typicode.com/posts');
     setState(() {});
   }

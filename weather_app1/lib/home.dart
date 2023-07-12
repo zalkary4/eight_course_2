@@ -11,19 +11,18 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  Future<Weather> fetchData() async {
+  Future<Weather?> fetchData() async {
     final dio = Dio();
     final res = await dio.get(ApiConts.adress);
     if (res.statusCode == 200) {
       final Weather weather = Weather(
-        id: id,
-        main: main,
-        description: description,
-        icon: icon,
+        id: res.data['weather'][0]['id'],
+        main: res.data['weather'][0]['main'],
+        description: res.data['weather'][0]['description'],
+        icon: res.data['weather'][0]['icon'],
       );
+      return weather;
     }
-    print(res);
-    return res;
   }
 
   @override

@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_app1/constants/api_const.dart';
+import 'package:weather_app1/models/weather.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,9 +11,17 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  Future<dynamic> fetchData() async {
+  Future<Weather> fetchData() async {
     final dio = Dio();
     final res = await dio.get(ApiConts.adress);
+    if (res.statusCode == 200) {
+      final Weather weather = Weather(
+        id: id,
+        main: main,
+        description: description,
+        icon: icon,
+      );
+    }
     print(res);
     return res;
   }

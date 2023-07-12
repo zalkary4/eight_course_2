@@ -34,11 +34,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('App Bar'), centerTitle: true),
-      body: FutureBuilder(
-          future: fetchData(),
-          builder: (ctx, sn) {
-            return Text(sn.toString());
-          }),
+      body: Center(
+        child: FutureBuilder(
+            future: fetchData(),
+            builder: (ctx, sn) {
+              if (sn.hasData) {
+                return Text(sn.data!.id.toString());
+              } else if (sn.hasError) {
+                return Text(sn.error.toString());
+              } else {
+                return CircularProgressIndicator();
+              }
+            }),
+      ),
     );
   }
 }

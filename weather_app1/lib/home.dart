@@ -39,7 +39,14 @@ class _HomePageState extends State<HomePage> {
             future: fetchData(),
             builder: (ctx, sn) {
               if (sn.hasData) {
-                return Text(sn.data!.id.toString());
+                return Column(
+                  children: [
+                    Text(sn.data!.id.toString()),
+                    Text(sn.data!.description),
+                    Text(sn.data!.main),
+                    Text(sn.data!.icon),
+                  ],
+                );
               } else if (sn.hasError) {
                 return Text(sn.error.toString());
               } else {

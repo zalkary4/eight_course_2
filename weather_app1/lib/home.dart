@@ -20,6 +20,9 @@ class _HomePageState extends State<HomePage> {
         main: res.data['weather'][0]['main'],
         description: res.data['weather'][0]['description'],
         icon: res.data['weather'][0]['icon'],
+        city: res.data['name'],
+        temp: res.data['main']['temp'],
+        country: res.data['sys']['country'],
       );
       return weather;
     }
@@ -45,6 +48,9 @@ class _HomePageState extends State<HomePage> {
                     Text(sn.data!.description),
                     Text(sn.data!.main),
                     Text(sn.data!.icon),
+                    Text(sn.data!.city),
+                    Text(sn.data!.country),
+                    Text(sn.data!.temp.toString()),
                   ],
                 );
               } else if (sn.hasError) {

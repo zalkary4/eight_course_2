@@ -53,20 +53,14 @@ class _HomePageState extends State<HomePage> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
+        child: const Column(
           children: [
             Row(
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.near_me,
-                    size: 50,
-                    color: AppColors.white,
-                  ),
-                ),
+                CustomIconButton(icon: Icons.near_me),
+                CustomIconButton(icon: Icons.location_city),
               ],
-            )
+            ),
           ],
         ),
       ),
@@ -94,6 +88,25 @@ class _HomePageState extends State<HomePage> {
       //     },
       //   ),
       // ),
+    );
+  }
+}
+
+class CustomIconButton extends StatelessWidget {
+  const CustomIconButton({
+    required this.icon,
+    super.key,
+  });
+  final IconData icon;
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {},
+      icon: Icon(
+        icon,
+        size: 50,
+        color: AppColors.white,
+      ),
     );
   }
 }

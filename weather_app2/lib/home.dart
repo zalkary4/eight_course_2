@@ -45,29 +45,39 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: AppColors.white,
         centerTitle: true,
       ),
-      body: Center(
-        child: FutureBuilder(
-            future: fetchData(),
-            builder: (ctx, sn) {
-              if (sn.hasData) {
-                return Column(
-                  children: [
-                    Text(sn.data!.id.toString()),
-                    Text(sn.data!.description),
-                    Text(sn.data!.main),
-                    Text(sn.data!.icon),
-                    Text(sn.data!.city),
-                    Text(sn.data!.country),
-                    Text(sn.data!.temp.toString()),
-                  ],
-                );
-              } else if (sn.hasError) {
-                return Text(sn.error.toString());
-              } else {
-                return CircularProgressIndicator();
-              }
-            }),
+      body: Container(
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/image.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
+      // body: Center(
+      //   child: FutureBuilder(
+      //     future: fetchData(),
+      //     builder: (ctx, sn) {
+      //       if (sn.hasData) {
+      //         return Column(
+      //           children: [
+      //             Text(sn.data!.id.toString()),
+      //             Text(sn.data!.description),
+      //             Text(sn.data!.main),
+      //             Text(sn.data!.icon),
+      //             Text(sn.data!.city),
+      //             Text(sn.data!.country),
+      //             Text(sn.data!.temp.toString()),
+      //           ],
+      //         );
+      //       } else if (sn.hasError) {
+      //         return Text(sn.error.toString());
+      //       } else {
+      //         return CircularProgressIndicator();
+      //       }
+      //     },
+      //   ),
+      // ),
     );
   }
 }

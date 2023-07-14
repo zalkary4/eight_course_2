@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_app1/constants/api_const.dart';
 import 'package:weather_app1/constants/app_colors.dart';
+import 'package:weather_app1/constants/app_text.dart';
 import 'package:weather_app1/constants/app_text_styles.dart';
 
 import 'models/weather.dart';
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('App Bar', style: AppTextStyle.appBar),
+        title: const Text(AppText.appBarTitle, style: AppTextStyle.appBar),
         backgroundColor: AppColors.white,
         centerTitle: true,
       ),

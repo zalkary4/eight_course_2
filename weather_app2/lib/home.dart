@@ -53,6 +53,22 @@ class _HomePageState extends State<HomePage> {
             fit: BoxFit.cover,
           ),
         ),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.near_me,
+                    size: 50,
+                    color: AppColors.white,
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
       // body: Center(
       //   child: FutureBuilder(

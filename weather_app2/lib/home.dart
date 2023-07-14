@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:weather_app1/components/custom_icon_button.dart';
 import 'package:weather_app1/constants/api_const.dart';
 import 'package:weather_app1/constants/app_colors.dart';
 import 'package:weather_app1/constants/app_text.dart';
@@ -88,25 +89,6 @@ class _HomePageState extends State<HomePage> {
       //     },
       //   ),
       // ),
-    );
-  }
-}
-
-class CustomIconButton extends StatelessWidget {
-  const CustomIconButton({
-    required this.icon,
-    super.key,
-  });
-  final IconData icon;
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: () {},
-      icon: Icon(
-        icon,
-        size: 50,
-        color: AppColors.white,
-      ),
     );
   }
 }

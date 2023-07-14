@@ -57,6 +57,7 @@ class _HomePageState extends State<HomePage> {
         child: const Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CustomIconButton(icon: Icons.near_me),
                 CustomIconButton(icon: Icons.location_city),

@@ -61,6 +61,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 CustomIconButton(icon: Icons.near_me),
                 CustomIconButton(icon: Icons.near_me),
+                CustomIconButton(icon: Icons.near_me),
                 CustomIconButton(icon: Icons.location_city),
               ],
             ),

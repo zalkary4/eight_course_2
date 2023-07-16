@@ -68,7 +68,6 @@ class _HomePageState extends State<HomePage> {
                 const Text('8', style: AppTextStyle.body1),
                 Image.network(
                   ApiConts.getIcon('11n', 4),
-                  height: 200,
                 ),
               ],
             ),

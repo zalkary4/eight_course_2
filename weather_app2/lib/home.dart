@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_app1/components/custom_icon_button.dart';
@@ -40,6 +42,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget build(BuildContext context) {
+    log('max W-------${MediaQuery.of(context).size.width}');
+    log('max H-------${MediaQuery.of(context).size.height}');
     return Scaffold(
       appBar: AppBar(
         title: const Text(AppText.appBarTitle, style: AppTextStyle.appBar),

@@ -63,6 +63,17 @@ class _HomePageState extends State<HomePage> {
                 CustomIconButton(icon: Icons.location_city),
               ],
             ),
+            Row(
+              children: [
+                Text(
+                  '8',
+                  style: TextStyle(
+                    color: AppColors.white,
+                    fontSize: 96,
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),

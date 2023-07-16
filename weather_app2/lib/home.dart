@@ -54,9 +54,9 @@ class _HomePageState extends State<HomePage> {
             fit: BoxFit.cover,
           ),
         ),
-        child: const Column(
+        child: Column(
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CustomIconButton(icon: Icons.near_me),
@@ -65,12 +65,10 @@ class _HomePageState extends State<HomePage> {
             ),
             Row(
               children: [
-                Text(
-                  '8',
-                  style: TextStyle(
-                    color: AppColors.white,
-                    fontSize: 96,
-                  ),
+                const Text('8', style: AppTextStyle.body1),
+                Image.network(
+                  ApiConts.getIcon('11n', 4),
+                  height: 200,
                 ),
               ],
             ),

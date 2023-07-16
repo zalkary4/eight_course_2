@@ -75,6 +75,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+            const Text(
+              'You`ll need and',
+              style: AppTextStyle.body2,
+            )
           ],
         ),
       ),

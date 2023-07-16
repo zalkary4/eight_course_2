@@ -69,16 +69,37 @@ class _HomePageState extends State<HomePage> {
             ),
             Row(
               children: [
+                const SizedBox(width: 20),
                 const Text('8', style: AppTextStyle.body1),
                 Image.network(
                   ApiConts.getIcon('11n', 4),
+                  height: 160,
+                  fit: BoxFit.fitHeight,
                 ),
               ],
             ),
-            const Text(
-              'You`ll need and',
-              style: AppTextStyle.body2,
-            )
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'You`ll need and'.replaceAll(" ", '\n'),
+                  textAlign: TextAlign.right,
+                  style: AppTextStyle.body2,
+                ),
+                const SizedBox(width: 20),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'Bishkek',
+                  textAlign: TextAlign.right,
+                  style: AppTextStyle.body1,
+                ),
+                const SizedBox(width: 10),
+              ],
+            ),
           ],
         ),
       ),

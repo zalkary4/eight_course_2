@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   'You`ll need and'.replaceAll(" ", '\n'),
                   textAlign: TextAlign.right,
-                  style: AppTextStyle.body2,
+                  style: AppTextStyle.body2(70 / 3),
                 ),
                 const SizedBox(width: 20),
               ],

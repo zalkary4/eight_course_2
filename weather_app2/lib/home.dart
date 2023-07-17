@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                   textAlign: TextAlign.right,
                   style: AppTextStyle.body1,
                 ),
-                const SizedBox(width: 10),
+                SizedBox(width: 10),
               ],
             ),
           ],

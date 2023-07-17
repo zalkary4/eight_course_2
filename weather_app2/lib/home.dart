@@ -78,16 +78,18 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  'You`ll need and'.replaceAll(" ", '\n'),
-                  textAlign: TextAlign.right,
-                  style: AppTextStyle.body2,
-                ),
-                const SizedBox(width: 20),
-              ],
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'You`ll need and'.replaceAll(" ", '\n'),
+                    textAlign: TextAlign.right,
+                    style: AppTextStyle.body2,
+                  ),
+                  const SizedBox(width: 20),
+                ],
+              ),
             ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.end,

@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(width: 20),
               ],
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(

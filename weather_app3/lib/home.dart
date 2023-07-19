@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: FutureBuilder<Weather?>(
-        future: fetchData{},
+        future: fetchData(),
         builder: (context, joop) {
           return Container(
             width: double.infinity,

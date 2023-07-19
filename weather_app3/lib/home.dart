@@ -55,9 +55,13 @@ class _HomePageState extends State<HomePage> {
         future: fetchData(),
         builder: (context, joop) {
           if (joop.connectionState == ConnectionState.waiting) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
+            return const Center(child: CircularProgressIndicator());
+          } else if (joop.connectionState == ConnectionState.none) {
+            return const Text('Internet jok');
+          } else if (joop.connectionState == ConnectionState.done) {
+            if (joop.hasError) {
+              return Text('${joop.error}');
+            }
           }
           return Container(
             width: double.infinity,

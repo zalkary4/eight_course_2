@@ -53,6 +53,11 @@ class _HomePageState extends State<HomePage> {
       body: FutureBuilder<Weather?>(
         future: fetchData(),
         builder: (context, joop) {
+          if (joop.connectionState == ConnectionState.waiting) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
           return Container(
             width: double.infinity,
             decoration: const BoxDecoration(

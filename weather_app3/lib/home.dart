@@ -19,6 +19,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Future<Weather?>? fetchData() async {
+    Future.delayed(Duration(seconds: 3));
     final dio = Dio();
     final response = await dio.get(ApiConts.adress);
     if (response.statusCode == 200) {

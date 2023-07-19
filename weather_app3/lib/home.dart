@@ -20,16 +20,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Future<Weather?> fetchData() async {
     final dio = Dio();
-    final res = await dio.get(ApiConts.adress);
-    if (res.statusCode == 200) {
+    final response = await dio.get(ApiConts.adress);
+    if (response.statusCode == 200) {
       final Weather weather = Weather(
-        id: res.data['weather'][0]['id'],
-        main: res.data['weather'][0]['main'],
-        description: res.data['weather'][0]['description'],
-        icon: res.data['weather'][0]['icon'],
-        city: res.data['name'],
-        temp: res.data['main']['temp'],
-        country: res.data['sys']['country'],
+        id: response.data['weather'][0]['id'],
+        main: response.data['weather'][0]['main'],
+        description: response.data['weather'][0]['description'],
+        icon: response.data['weather'][0]['icon'],
+        city: response.data['name'],
+        temp: response.data['main']['temp'],
+        country: response.data['sys']['country'],
       );
       return weather;
     }

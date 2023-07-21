@@ -119,62 +119,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               );
             }
-          } else Text('Some error!!!')
-          return Container(
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/image.jpg'),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Column(
-              children: [
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CustomIconButton(icon: Icons.near_me),
-                    CustomIconButton(icon: Icons.location_city),
-                  ],
-                ),
-                Row(
-                  children: [
-                    const SizedBox(width: 20),
-                    const Text('8', style: AppTextStyle.body1),
-                    Image.network(
-                      ApiConts.getIcon('11n', 4),
-                      height: 160,
-                      fit: BoxFit.fitHeight,
-                    ),
-                  ],
-                ),
-                Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        'You`ll need and'.replaceAll(" ", '\n'),
-                        textAlign: TextAlign.right,
-                        style: AppTextStyle.body2,
-                      ),
-                      const SizedBox(width: 20),
-                    ],
-                  ),
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      'Bishkek',
-                      textAlign: TextAlign.right,
-                      style: AppTextStyle.body1,
-                    ),
-                    SizedBox(width: 10),
-                  ],
-                ),
-              ],
-            ),
-          );
+          } else {
+            return const Text('Some error!!!');
+          }
         },
       ),
       // body: Center(

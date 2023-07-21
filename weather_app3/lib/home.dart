@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               );
             }
-          }
+          } else Text('Some error!!!')
           return Container(
             width: double.infinity,
             decoration: const BoxDecoration(

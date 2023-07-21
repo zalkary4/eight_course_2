@@ -118,6 +118,8 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               );
+            } else {
+              return const Text('Some error!!!');
             }
           } else {
             return const Text('Some error!!!');

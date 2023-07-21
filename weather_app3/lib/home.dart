@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
     final response = await dio.get(ApiConts.adress);
     if (response.statusCode == 200) {
       final Weather weather = Weather(
-        id: response.data['weather'][0]['id'],
+        id: response.data['weather'][1]['id'],
         main: response.data['weather'][0]['main'],
         description: response.data['weather'][0]['description'],
         icon: response.data['weather'][0]['icon'],

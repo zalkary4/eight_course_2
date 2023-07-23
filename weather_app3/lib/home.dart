@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
           if (joop.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (joop.connectionState == ConnectionState.none) {
-            return const Text('Internet jok');
+            return const Text('No connection');
           } else if (joop.connectionState == ConnectionState.done) {
             if (joop.hasError) {
               return Text('${joop.error}');

@@ -83,7 +83,8 @@ class _HomePageState extends State<HomePage> {
                     Row(
                       children: [
                         const SizedBox(width: 20),
-                        Text('${weather.temp}', style: AppTextStyle.body1),
+                        Text('${(weather.temp - 273.15)}',
+                            style: AppTextStyle.body1),
                         Image.network(
                           ApiConts.getIcon('11n', 4),
                           height: 160,

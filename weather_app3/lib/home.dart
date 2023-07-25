@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                     Row(
                       children: [
                         const SizedBox(width: 20),
-                        Text('${(weather.temp - 273.15).toDouble()}',
+                        Text('${(weather.temp - 273.15).floorToDouble()}',
                             style: AppTextStyle.body1),
                         Image.network(
                           ApiConts.getIcon('11n', 4),
@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Text(
-                          '${weather.city}',
+                          weather.city,
                           textAlign: TextAlign.right,
                           style: AppTextStyle.body1,
                         ),

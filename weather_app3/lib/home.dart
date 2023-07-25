@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           FittedBox(
                             child: Text(
-                              'oijojosijd coisjdcois'.replaceAll(" ", '\n'),
+                              'You\'ll need and'.replaceAll(" ", '\n'),
                               // '${weather.description}'.replaceAll(" ", '\n'),
                               textAlign: TextAlign.right,
                               style: AppTextStyle.body2,

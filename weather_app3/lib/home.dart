@@ -92,33 +92,35 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            '${weather.description}'.replaceAll(" ", '\n'),
-                            textAlign: TextAlign.right,
-                            style: AppTextStyle.body2,
-                          ),
-                          const SizedBox(width: 20),
-                        ],
-                      ),
-                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Expanded(
                           child: FittedBox(
                             child: Text(
+                              '${weather.description}'.replaceAll(" ", '\n'),
+                              textAlign: TextAlign.right,
+                              style: AppTextStyle.body2,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 20),
+                      ],
+                    ),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          FittedBox(
+                            child: Text(
                               weather.city,
                               textAlign: TextAlign.right,
                               style: AppTextStyle.body1,
                             ),
                           ),
-                        ),
-                        const SizedBox(width: 10),
-                      ],
+                          const SizedBox(width: 10),
+                        ],
+                      ),
                     ),
                   ],
                 ),

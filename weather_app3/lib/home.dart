@@ -108,11 +108,13 @@ class _HomePageState extends State<HomePage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        FittedBox(
-                          child: Text(
-                            weather.city,
-                            textAlign: TextAlign.right,
-                            style: AppTextStyle.body1,
+                        Expanded(
+                          child: FittedBox(
+                            child: Text(
+                              weather.city,
+                              textAlign: TextAlign.right,
+                              style: AppTextStyle.body1,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 10),

@@ -92,20 +92,21 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Expanded(
-                          child: FittedBox(
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          FittedBox(
                             child: Text(
-                              '${weather.description}'.replaceAll(" ", '\n'),
+                              'oijojosijd coisjdcois'.replaceAll(" ", '\n'),
+                              // '${weather.description}'.replaceAll(" ", '\n'),
                               textAlign: TextAlign.right,
                               style: AppTextStyle.body2,
                             ),
                           ),
-                        ),
-                        const SizedBox(width: 20),
-                      ],
+                          const SizedBox(width: 20),
+                        ],
+                      ),
                     ),
                     Expanded(
                       child: Row(

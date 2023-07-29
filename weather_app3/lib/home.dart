@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                             style: AppTextStyle.body1),
                         Image.network(
                           ApiConts.getIcon('11n', 4),
-                          height: 150,
+                          height: 160,
                           fit: BoxFit.fitHeight,
                         ),
                       ],

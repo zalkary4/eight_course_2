@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                               style: AppTextStyle.body2,
                             ),
                           ),
-                          const SizedBox(width: 50),
+                          const SizedBox(width: 20),
                         ],
                       ),
                     ),
